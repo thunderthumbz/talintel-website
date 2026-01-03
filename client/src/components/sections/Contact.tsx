@@ -32,6 +32,7 @@ const EMAILJS_PUBLIC_KEY = "9LtnZ0U4NFPL6lyQH";
 
 export function Contact() {
   const { toast } = useToast();
+   emailjs.init(EMAILJS_PUBLIC_KEY);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
