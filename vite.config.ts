@@ -6,7 +6,7 @@ import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { metaImagesPlugin } from "./vite-plugin-meta-images";
 
 export default defineConfig({
-  base: "/talintel-website/", // <--- Important for GitHub Pages
+  base: "/", // <--- Changed from "/talintel-website/" to "/" for custom domain
   plugins: [
     react(),
     runtimeErrorOverlay(),
