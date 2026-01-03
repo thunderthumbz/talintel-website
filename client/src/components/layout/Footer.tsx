@@ -35,7 +35,7 @@ export function Footer() {
               </li>
               <li>
                 <a 
-                  href="https://linkedin.com" 
+                  href="https://www.linkedin.com/company/talintel-consulting/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-gray-300 hover:text-accent transition-colors"
