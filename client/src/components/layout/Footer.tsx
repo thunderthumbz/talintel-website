@@ -19,7 +19,6 @@ export function Footer() {
               Stockholm, Sweden
             </p>
           </div>
-
           {/* Connect Column */}
           <div className="space-y-4">
             <h4 className="font-heading font-semibold text-lg text-secondary">Connect</h4>
@@ -38,6 +37,7 @@ export function Footer() {
                   href="https://www.linkedin.com/company/talintel-consulting/" 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  title="Follow us on LinkedIn"
                   className="flex items-center gap-2 text-gray-300 hover:text-accent transition-colors"
                 >
                   <img src={linkedinLogo} alt="LinkedIn" className="w-4 h-4 object-contain" />
@@ -46,7 +46,6 @@ export function Footer() {
               </li>
             </ul>
           </div>
-
           {/* Privacy Column */}
           <div className="space-y-4">
             <h4 className="font-heading font-semibold text-lg text-secondary">Privacy</h4>
@@ -55,7 +54,6 @@ export function Footer() {
             </p>
           </div>
         </div>
-
         <div className="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
           © 2026 TALINTEL Consulting. All rights reserved.
         </div>
