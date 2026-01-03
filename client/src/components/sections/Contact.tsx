@@ -2,8 +2,9 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { motion } from "framer-motion";
-import { Calendar, Send, Loader2 } from "lucide-react";
+import { Calendar, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 import { Button } from "@/components/ui/button";
 import {
@@ -24,6 +25,11 @@ const formSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
+// EmailJS Configuration
+const EMAILJS_SERVICE_ID = "service_hfyuhx9";
+const EMAILJS_TEMPLATE_ID = "template_qkt4bmo";
+const EMAILJS_PUBLIC_KEY = "9LtnZ0U4NFPL6lyQH";
+
 export function Contact() {
   const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchema>>({
@@ -36,16 +42,36 @@ export function Contact() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Simulate API call
-    console.log(values);
-    setTimeout(() => {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          name: values.name,
+          email: values.email,
+          company: values.company || "Not provided",
+          message: values.message,
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+
+      if (result.status === 200) {
+        toast({
+          title: "Message Sent Successfully",
+          description: "Thank you for reaching out. We'll be in touch shortly.",
+        });
+        form.reset();
+      }
+    } catch (error) {
+      console.error("EmailJS Error:", error);
       toast({
-        title: "Message Sent",
-        description: "Thank you for reaching out. We'll be in touch shortly.",
+        title: "Failed to Send Message",
+        description: "There was an error sending your message. Please try again or email us directly at hello@talintel.ai",
+        variant: "destructive",
       });
-      form.reset();
-    }, 1000);
+    }
   }
 
   return (
