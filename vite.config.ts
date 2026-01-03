@@ -5,11 +5,8 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { metaImagesPlugin } from "./vite-plugin-meta-images";
 
-export default defineConfig(async () => ({
-  // ✅ REQUIRED for GitHub Pages
-  // Replace `talintel-website` ONLY if your repo name is different
-  base: "/talintel-website/",
-
+export default defineConfig({
+  base: "/talintel-website/", // <--- Important for GitHub Pages
   plugins: [
     react(),
     runtimeErrorOverlay(),
@@ -18,12 +15,15 @@ export default defineConfig(async () => ({
     ...(process.env.NODE_ENV !== "production" &&
     process.env.REPL_ID !== undefined
       ? [
-          (await import("@replit/vite-plugin-cartographer")).cartographer(),
-          (await import("@replit/vite-plugin-dev-banner")).devBanner(),
+          await import("@replit/vite-plugin-cartographer").then((m) =>
+            m.cartographer(),
+          ),
+          await import("@replit/vite-plugin-dev-banner").then((m) =>
+            m.devBanner(),
+          ),
         ]
       : []),
   ],
-
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
@@ -31,22 +31,16 @@ export default defineConfig(async () => ({
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
   },
-
   css: {
     postcss: {
       plugins: [],
     },
   },
-
-  // ✅ Frontend root
   root: path.resolve(import.meta.dirname, "client"),
-
-  // ✅ Build output (used by GitHub Pages)
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
   },
-
   server: {
     host: "0.0.0.0",
     allowedHosts: true,
@@ -55,5 +49,4 @@ export default defineConfig(async () => ({
       deny: ["**/.*"],
     },
   },
-}));
-
+});
