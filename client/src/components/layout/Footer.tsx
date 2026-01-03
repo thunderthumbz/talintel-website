@@ -13,7 +13,7 @@ export function Footer() {
               <span className="text-white">INTEL</span>
             </span>
             <p className="text-gray-300 italic font-light">
-              "Talent. Intelligence. Clarity that scales."
+              Talent. Intelligence. Clarity that scales.
             </p>
             <p className="text-sm text-gray-400 mt-4">
               Stockholm, Sweden
@@ -57,7 +57,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
-          © 2025 TALINTEL Consulting. All rights reserved.
+          © 2026 TALINTEL Consulting. All rights reserved.
         </div>
       </div>
     </footer>
