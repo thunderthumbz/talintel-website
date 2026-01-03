@@ -235,7 +235,17 @@ For issues or questions:
 - **GitHub Actions:** https://github.com/thunderthumbz/talintel-website/actions
 - **Settings:** https://github.com/thunderthumbz/talintel-website/settings
 
+--
+
 ---
+
+## Deployment Fix
+
+**Fixed:** GitHub Pages deployment 404 error by enabling read and write permissions for GITHUB_TOKEN workflow permissions.
+
+**Issue:** The workflow had insufficient permissions to deploy artifacts to GitHub Pages.
+**Solution:** Changed workflow permissions from "Read repository contents" to "Read and write permissions" in Actions settings.
+**Status:** ✅ Fix verified and deployed.-
 
 **Last Updated:** January 2025  
 **Deployment Status:** ✅ Automated via GitHub Actions  
