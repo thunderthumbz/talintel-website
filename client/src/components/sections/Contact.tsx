@@ -54,7 +54,8 @@ export function Contact() {
           email: values.email,
           company: values.company || "Not provided",
           message: values.message,
-        
+        ,
+           EMAILJS_PUBLIC_KEY
           );
 
       if (result.status === 200) {
