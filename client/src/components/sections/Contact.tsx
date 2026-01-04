@@ -26,7 +26,7 @@ const formSchema = z.object({
 });
 
 // EmailJS Configuration
-const EMAILJS_SERVICE_ID = "service_hfyuhx9";
+const EMAILJS_SERVICE_ID = "service_33b0sb6";
 const EMAILJS_TEMPLATE_ID = "template_qkt4bmo";
 const EMAILJS_PUBLIC_KEY = "9LtnZ0U4NFPL6lyQH";
 
