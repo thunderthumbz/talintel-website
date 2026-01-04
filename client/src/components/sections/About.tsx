@@ -140,13 +140,14 @@ export function About() {
             className="md:col-span-8 lg:col-span-9 space-y-6 text-gray-600 leading-relaxed"
           >
             <p>
-              Ryan MacDougall is a senior talent leader and advisor with deep experience building and scaling hiring systems in complex, global environments. Throughout his career, he has led talent functions, advised executive teams, and partnered closely with founders and leaders navigating periods of growth, transformation, and challenge.
+              Ryan MacDougall is a senior talent advisor who helps leadership teams make high-stakes hiring decisions that hold up under pressure.
+              He has led global talent functions, advised executive teams, and worked directly with founders and CEOs during periods of growth, restructuring, and transformation—where the cost of hiring mistakes is highest.
             </p>
             <p>
-              His background spans both startups and Fortune 500 companies, giving him unique insight into how hiring strategies must adapt to different business realities. He has led and developed teams across North America, Europe, and APAC, shaping global talent operations that balance local nuance with organizational scale.
+              His experience spans startups and Fortune 500 organizations across North America, Europe, and APAC, giving him a practical understanding of how talent strategies must adapt to different business models, markets, and operating realities.
             </p>
             <p>
-              An expatriate who has lived and worked in both North America and Europe, Ryan brings a deep appreciation for the role culture plays across geographies and within companies.
+              An expatriate who has lived and worked in both North America and Europe, Ryan brings a grounded perspective on how culture, structure, and decision-making intersect in global organizations.
             </p>
             <p className="text-primary font-medium italic border-l-4 border-secondary pl-4 py-2 bg-white">
               "His work is grounded in one principle: hiring decisions must hold up in practice, not just on paper."
