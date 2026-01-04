@@ -32,7 +32,6 @@ const EMAILJS_PUBLIC_KEY = "9LtnZ0U4NFPL6lyQH";
 
 export function Contact() {
   const { toast } = useToast();
-   emailjs.init(EMAILJS_PUBLIC_KEY);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -45,7 +44,7 @@ export function Contact() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      // Send email using EmailJS
+      // Send email using EmailJS (v4 syntax - no init() needed)
       const result = await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
@@ -54,9 +53,9 @@ export function Contact() {
           email: values.email,
           company: values.company || "Not provided",
           message: values.message,
-        ,
-           EMAILJS_PUBLIC_KEY
-          );
+        },
+        EMAILJS_PUBLIC_KEY // Public key as 4th parameter
+      );
 
       if (result.status === 200) {
         toast({
@@ -65,8 +64,9 @@ export function Contact() {
         });
         form.reset();
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error("EmailJS Error:", error);
+      console.error("Error details:", error.text || error.message);
       toast({
         title: "Failed to Send Message",
         description: "There was an error sending your message. Please try again or email us directly at hello@talintel.ai",
