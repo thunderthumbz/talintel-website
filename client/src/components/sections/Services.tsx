@@ -10,10 +10,12 @@ const services = [
     description: (
       <>
         Reduce decision time without lowering the bar.
-        <br/><br/>
+        <br /><br />
         We identify where hiring processes break under pressure and redesign them to produce consistent, high-quality decisions, without adding unnecessary steps or tools.
-        <br/><br/>
-        <span className="text-primary font-semibold text-sm uppercase">Best for teams scaling engineering, product, or leadership under time constraints.</span>
+        <br /><br />
+        <span className="text-primary font-semibold text-sm uppercase">
+          Best for teams scaling engineering, product, or leadership under time constraints.
+        </span>
       </>
     )
   },
@@ -23,10 +25,12 @@ const services = [
     description: (
       <>
         Senior talent leadership when it matters most.
-        <br/><br/>
+        <br /><br />
         Embedded Head-of-Talent support for organizations navigating growth, restructuring, or transition, without committing to a full-time executive.
-        <br/><br/>
-        <span className="text-primary font-semibold text-sm uppercase">Best for post-funding scaleups, new studios, or leadership gaps.</span>
+        <br /><br />
+        <span className="text-primary font-semibold text-sm uppercase">
+          Best for post-funding scaleups, new studios, or leadership gaps.
+        </span>
       </>
     ),
     isCore: true
@@ -37,10 +41,12 @@ const services = [
     description: (
       <>
         Turn hiring activity into business signal.
-        <br/><br/>
+        <br /><br />
         We translate hiring data into clear insight: where risk is building, where pipelines fail, and what decisions need attention now, not later.
-        <br/><br/>
-        <span className="text-primary font-semibold text-sm uppercase">Best for leadership teams who need clarity, not dashboards.</span>
+        <br /><br />
+        <span className="text-primary font-semibold text-sm uppercase">
+          Best for leadership teams who need clarity, not dashboards.
+        </span>
       </>
     )
   },
@@ -50,10 +56,12 @@ const services = [
     description: (
       <>
         Precision search for roles that cannot fail.
-        <br/><br/>
+        <br /><br />
         Targeted, discreet search for senior and leadership hires where judgment, alignment, and long-term fit matter more than speed alone.
-        <br/><br/>
-        <span className="text-primary font-semibold text-sm uppercase">Best for executives, technical leaders, and mission-critical roles.</span>
+        <br /><br />
+        <span className="text-primary font-semibold text-sm uppercase">
+          Best for executives, technical leaders, and mission-critical roles.
+        </span>
       </>
     ),
     isCore: true
@@ -64,10 +72,12 @@ const services = [
     description: (
       <>
         Make talent decisions with real market context.
-        <br/><br/>
+        <br /><br />
         We map talent availability, compensation dynamics, and competitive hiring behavior to support expansion, location strategy, and critical role planning.
-        <br/><br/>
-        <span className="text-primary font-semibold text-sm uppercase">Best for market entry, AI hiring, or organizational redesign.</span>
+        <br /><br />
+        <span className="text-primary font-semibold text-sm uppercase">
+          Best for market entry, AI hiring, or organizational redesign.
+        </span>
       </>
     )
   },
@@ -77,10 +87,12 @@ const services = [
     description: (
       <>
         Use technology to support decisions, not replace them.
-        <br/><br/>
+        <br /><br />
         We help teams deploy automation and AI where it genuinely reduces friction and improves signal, without creating noise or false confidence.
-        <br/><br/>
-        <span className="text-primary font-semibold text-sm uppercase">Best for organizations overwhelmed by tools but lacking clarity.</span>
+        <br /><br />
+        <span className="text-primary font-semibold text-sm uppercase">
+          Best for organizations overwhelmed by tools but lacking clarity.
+        </span>
       </>
     )
   }
@@ -91,6 +103,8 @@ export function Services() {
     <section id="what-we-do" className="py-24 bg-gray-50 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
       <div className="container mx-auto px-6 relative z-10">
+
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -98,7 +112,7 @@ export function Services() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-4xl mx-auto mb-16"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -107,7 +121,7 @@ export function Services() {
           >
             What We Do
           </motion.h2>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -141,8 +155,8 @@ export function Services() {
                   "h-full border-l-4 bg-white shadow-sm transition-all duration-300 group relative",
                   "hover:shadow-2xl hover:-translate-y-3 md:hover:scale-[1.02] hover:border-l-accent",
                   "active:scale-[0.98] focus-within:ring-2 focus-within:ring-accent outline-none",
-                  service.isCore 
-                    ? "border-l-accent ring-1 ring-accent/20 shadow-accent/5 hover:ring-accent/40 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)]" 
+                  service.isCore
+                    ? "border-l-accent ring-1 ring-accent/20 shadow-accent/5 hover:ring-accent/40 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)]"
                     : "border-l-secondary"
                 )}
               >
@@ -152,20 +166,34 @@ export function Services() {
                       <service.icon className="w-8 h-8 text-secondary group-hover:text-white transition-colors duration-300" />
                     </div>
                     {service.isCore && (
-                      <span className="text-[11px] font-bold uppercase tracking-tighter bg-accent text-white px-2 py-1 rounded-sm shadow-sm">Core Offering</span>
+                      <span className="text-[11px] font-bold uppercase tracking-tighter bg-accent text-white px-2 py-1 rounded-sm shadow-sm">
+                        Core Offering
+                      </span>
                     )}
                   </div>
+
                   <h3 className="text-xl font-bold text-primary mb-2 group-hover:text-accent transition-colors duration-300 relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 group-hover:after:w-full">
                     {service.title}
                   </h3>
+
                   <div className="w-full h-[1px] bg-gray-100 mb-4" />
-                  <div className="text-gray-600 text-base leading-[1.7] text-left">
-                    {typeof service.description === 'string' ? service.description : (
-                      <div className="description-content">
+
+                  {/* Description with Best For Pills */}
+                  <div className="text-gray-600 text-base leading-[1.7] text-left space-y-2">
+                    {typeof service.description === "string" ? service.description : (
+                      <div className="description-content space-y-2">
                         {service.description.props.children.map((child: any, i: number) => {
-                          if (child && child.props && child.props.className && child.props.className.includes('text-primary')) {
+                          if (
+                            child &&
+                            child.props &&
+                            child.props.className &&
+                            child.props.className.includes("text-primary")
+                          ) {
                             return (
-                              <span key={i} className="block mt-6 pt-4 border-t border-gray-100 italic text-gray-500 font-medium text-[13px] bg-gray-50/50 px-2 py-1.5 rounded">
+                              <span
+                                key={i}
+                                className="inline-block px-3 py-1 rounded-full text-[13px] font-medium uppercase bg-gray-100 text-primary transition-all duration-300 hover:bg-primary hover:text-white"
+                              >
                                 {child.props.children}
                               </span>
                             );
@@ -181,7 +209,7 @@ export function Services() {
           ))}
         </div>
 
-        {/* Quote block */}
+        {/* Quote Block */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
