@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import founderImg from "@assets/generated_images/ryan_LI.png";
+import founderImg from "@/assets/generated_images/ryan_LI.png";
 import { Target, Users, Lightbulb, Settings } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 

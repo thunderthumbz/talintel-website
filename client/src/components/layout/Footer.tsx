@@ -1,6 +1,5 @@
 import { Mail } from "lucide-react";
-import linkedinLogo from "@assets/download_1767304725284.png";
-
+import linkedinLogo from "@/assets/InBug-White_1767283242084.png";
 export function Footer() {
   return (
     <footer className="bg-primary text-white py-16 border-t border-white/10">
