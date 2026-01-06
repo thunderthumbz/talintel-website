@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
-import heroBg from "@/assets/generated_images/dark_blue_geometric_corporate_background.png";
+import heroBg from "@/assets/generated_images/dark_blue_geometric_corporate_background.webp";
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
