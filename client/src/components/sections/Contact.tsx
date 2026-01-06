@@ -93,7 +93,7 @@ export function Contact() {
             If you are navigating a critical hire, scaling a team, or questioning whether your hiring system 
             is giving you the right signal, TALINTEL can help.
             <br />
-            Initial conversations are focused, practical, and diagnostic.
+            Initial conversations are focused, practical, and action-oriented.
           </p>
         </motion.div>
 
@@ -115,7 +115,7 @@ export function Contact() {
                     <strong>Best for:</strong> leadership hires, system reviews, or strategic talent decisions
                   </p>
                   <p>
-                    <strong>You'll get:</strong> a 30-minute diagnostic with clear next steps
+                    <strong>You'll get:</strong> a 30-minute consultation with clear next steps
                   </p>
                   <p>
                     <strong>Response time:</strong> within 24 to 48 hours
@@ -216,7 +216,7 @@ export function Contact() {
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Sending...
                       </>
                     ) : (
-                      "Request diagnostic call"
+                      "Send message"
                     )}
                   </Button>
                 </form>
