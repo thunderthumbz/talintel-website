@@ -152,7 +152,7 @@ export function Services() {
             >
               <Card
                 className={cn(
-                  "h-full border-l-4 bg-white shadow-sm transition-all duration-300 group relative",
+                  "group h-full border-l-4 bg-white shadow-sm transition-all duration-300 relative",
                   "hover:shadow-2xl hover:-translate-y-3 md:hover:scale-[1.02] hover:border-l-accent",
                   "active:scale-[0.98] focus-within:ring-2 focus-within:ring-accent outline-none",
                   service.isCore
@@ -192,7 +192,7 @@ export function Services() {
                             return (
                               <span
                                 key={i}
-                                className="inline-block px-3 py-1 rounded-full text-[13px] font-medium uppercase bg-gray-100 text-primary transition-all duration-300 hover:bg-primary hover:text-white"
+                                className="inline-block px-3 py-1 rounded-full text-[13px] font-medium uppercase bg-gray-100 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white"
                               >
                                 {child.props.children}
                               </span>
