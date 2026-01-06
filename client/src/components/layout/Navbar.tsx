@@ -83,7 +83,7 @@ export function Navbar() {
                   : "bg-white text-primary hover:bg-white/90"
               )}
             >
-              Schedule a 30-minute diagnostic
+              Schedule a consultation
             </Button>
           </motion.div>
         </div>
@@ -115,7 +115,7 @@ export function Navbar() {
           }}
           className="w-full font-semibold py-3 rounded-sm border-none bg-primary text-white hover:bg-primary/90 active:scale-95 transition-all duration-300"
         >
-          Schedule diagnostic
+          Schedule a consultation
         </Button>
       </motion.div>
 
