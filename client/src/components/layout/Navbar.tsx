@@ -102,6 +102,33 @@ export function Navbar() {
         </button>
       </div>
 
+      {/* Mobile Sticky CTA Button - Fixed at top of viewport */}
+      <motion.div
+        className="fixed bottom-0 left-0 right-0 md:hidden z-40 bg-white border-t border-gray-200 p-4 safe-area-inset-bottom"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+      >
+        <Button
+          onClick={() => {
+            document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+            setMobileMenuOpen(false);
+          }}
+          className="w-full font-semibold py-3 rounded-sm border-none bg-primary text-white hover:bg-primary/90 active:scale-95 transition-all duration-300"
+        >
+          Schedule diagnostic
+        </Button>
+      </motion.div>
+
+      {/* Add padding to body to prevent button overlap on mobile */}
+      <style>{`
+        @media (max-width: 767px) {
+          main {
+            padding-bottom: 5rem;
+          }
+        }
+      `}</style>
+
       {/* Mobile Menu Overlay - Fixed positioning with proper z-index */}
       {mobileMenuOpen && (
         <motion.div
