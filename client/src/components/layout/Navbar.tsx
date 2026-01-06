@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
-import { Link } from "wouter";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 
 const navItems = [
   { name: "What We Do", href: "#what-we-do" },
@@ -130,26 +129,28 @@ export function Navbar() {
       `}</style>
 
       {/* Mobile Menu Overlay - Fixed positioning with proper z-index */}
-      {mobileMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          className="fixed left-0 right-0 z-40 bg-white shadow-lg p-6 md:hidden flex flex-col gap-4"
-          style={{ top: isScrolled ? '4rem' : '5.5rem' }}
-        >
-          {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              onClick={(e) => scrollToSection(e, item.href)}
-              className="text-lg font-medium text-gray-800 py-2 border-b border-gray-100 last:border-0"
-            >
-              {item.name}
-            </a>
-          ))}
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="fixed left-0 right-0 z-40 bg-white shadow-lg p-6 md:hidden flex flex-col gap-4"
+            style={{ top: isScrolled ? '4rem' : '5.5rem' }}
+          >
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={(e) => scrollToSection(e, item.href)}
+                className="text-lg font-medium text-gray-800 py-2 border-b border-gray-100 last:border-0"
+              >
+                {item.name}
+              </a>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
