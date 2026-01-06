@@ -133,9 +133,9 @@ export function Services() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={isMobile ? { opacity: 0, y: 20 } : false}
-              whileInView={isMobile ? { opacity: 1, y: 0 } : false}
-              viewport={isMobile ? { once: true } : false}
+              initial={isMobile ? { opacity: 0, y: 20 } : undefined}
+              whileInView={isMobile ? { opacity: 1, y: 0 } : undefined}
+              viewport={isMobile ? { once: true } : undefined}
               transition={isMobile ? { duration: 0.5, delay: index * 0.15 } : undefined}
             >
               <Card

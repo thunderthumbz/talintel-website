@@ -60,9 +60,9 @@ export function About() {
             {values.map((val, i) => (
               <motion.div
                 key={i}
-                initial={isMobile ? { opacity: 0, y: 20, rotate: -5 } : false}
-                whileInView={isMobile ? { opacity: 1, y: 0, rotate: 0 } : false}
-                viewport={isMobile ? { once: true } : false}
+                initial={isMobile ? { opacity: 0, y: 20, rotate: -5 } : undefined}
+                whileInView={isMobile ? { opacity: 1, y: 0, rotate: 0 } : undefined}
+                viewport={isMobile ? { once: true } : undefined}
                 transition={isMobile ? { duration: 0.5, delay: i * 0.15 } : undefined}
               >
                 <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center group">
@@ -110,9 +110,9 @@ export function About() {
           <h3 className="text-2xl font-bold text-primary text-center uppercase tracking-widest">Founder</h3>
           <div className="grid md:grid-cols-12 gap-12 items-start">
             <motion.div
-              initial={isMobile ? { opacity: 0, x: -40 } : false}
-              whileInView={isMobile ? { opacity: 1, x: 0 } : false}
-              viewport={isMobile ? { once: true } : false}
+              initial={isMobile ? { opacity: 0, x: -40 } : undefined}
+              whileInView={isMobile ? { opacity: 1, x: 0 } : undefined}
+              viewport={isMobile ? { once: true } : undefined}
               transition={isMobile ? { duration: 0.6 } : undefined}
               className="md:col-span-4 lg:col-span-3"
             >
@@ -131,9 +131,9 @@ export function About() {
             </motion.div>
 
             <motion.div
-              initial={isMobile ? { opacity: 0, x: 40 } : false}
-              whileInView={isMobile ? { opacity: 1, x: 0 } : false}
-              viewport={isMobile ? { once: true } : false}
+              initial={isMobile ? { opacity: 0, x: 40 } : undefined}
+              whileInView={isMobile ? { opacity: 1, x: 0 } : undefined}
+              viewport={isMobile ? { once: true } : undefined}
               transition={isMobile ? { duration: 0.6 } : undefined}
               className="md:col-span-8 lg:col-span-9 space-y-6 text-gray-600 leading-relaxed"
             >
@@ -147,9 +147,9 @@ export function About() {
                 His background spans startups and Fortune 500 organizations, with hands-on experience across North America, Europe, and APAC, bringing a practical understanding of how hiring strategies must adapt to different business realities and cultures.
               </p>
               <motion.p 
-                initial={isMobile ? { opacity: 0, scale: 0.95 } : false}
-                whileInView={isMobile ? { opacity: 1, scale: 1 } : false}
-                viewport={isMobile ? { once: true } : false}
+                initial={isMobile ? { opacity: 0, scale: 0.95 } : undefined}
+                whileInView={isMobile ? { opacity: 1, scale: 1 } : undefined}
+                viewport={isMobile ? { once: true } : undefined}
                 transition={isMobile ? { duration: 0.5, delay: 0.3 } : undefined}
                 className="text-primary font-medium italic border-l-3 border-accent pl-6 py-4 bg-gray-50 text-lg md:text-xl"
               >
