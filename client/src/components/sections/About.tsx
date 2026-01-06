@@ -4,26 +4,10 @@ import { Target, Users, Lightbulb, Settings } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const values = [
-  {
-    icon: Target,
-    title: "Clarity",
-    text: "Focus on the roles, decisions, and signals that actually matter."
-  },
-  {
-    icon: Lightbulb,
-    title: "Intelligence",
-    text: "Data is only valuable when it improves judgment and action."
-  },
-  {
-    icon: Settings,
-    title: "Structure",
-    text: "Strong hiring systems rely on consistency and follow-through under pressure."
-  },
-  {
-    icon: Users,
-    title: "Accountability",
-    text: "We work as partners. Outcomes matter."
-  }
+  { icon: Target, title: "Clarity", text: "Focus on the roles, decisions, and signals that actually matter." },
+  { icon: Lightbulb, title: "Intelligence", text: "Data is only valuable when it improves judgment and action." },
+  { icon: Settings, title: "Structure", text: "Strong hiring systems rely on consistency and follow-through under pressure." },
+  { icon: Users, title: "Accountability", text: "We work as partners. Outcomes matter." }
 ];
 
 export function About() {
@@ -31,7 +15,7 @@ export function About() {
     <section id="about" className="py-24 md:py-32 bg-white relative">
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
       <div className="container mx-auto px-6 space-y-32">
-        
+
         {/* About TALINTEL */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -41,8 +25,7 @@ export function About() {
           className="text-center max-w-4xl mx-auto"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tighter">
-            About <span className="text-secondary">TAL</span>
-            <span className="text-primary">INTEL</span>
+            About <span className="text-secondary">TAL</span><span className="text-primary">INTEL</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-700 leading-[1.7]">
             TALINTEL is a consulting and advisory firm focused on talent intelligence and execution for leadership teams in complex, competitive markets. 
@@ -50,17 +33,17 @@ export function About() {
           </p>
         </motion.div>
 
-        {/* What We Stand For */}
+        {/* Values cards */}
         <div>
           <h3 className="text-2xl font-bold text-primary text-center mb-12 uppercase tracking-widest">What We Stand For</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((val, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20, rotate: -5 }}
+                initial={{ opacity: 0, y: 30, rotate: -5 }}
                 whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.15 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.6, delay: i * 0.15 }}
               >
                 <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center group">
                   <CardContent className="p-6 pt-8">
@@ -86,30 +69,21 @@ export function About() {
         >
           <h3 className="text-2xl font-bold text-primary mb-6 uppercase tracking-widest text-center">Our Story</h3>
           <div className="space-y-4 text-gray-600">
-            <p>
-              TALINTEL was built around a pattern seen repeatedly across industries and growth stages. 
-              Companies were investing heavily in hiring: new tools, larger teams, external support. Yet still making slow, inconsistent decisions that didn't hold up when pressure increased.
-            </p>
-            <p className="font-semibold text-primary">
-              The issue was rarely effort or budget. It was clarity.
-            </p>
-            <p>
-              Teams had data but no shared framework. Leaders had opinions but no aligned decision process. Systems existed, but failed when stakes rose.
-            </p>
-            <p>
-              TALINTEL exists to fix that by bringing structure, intelligence, and execution to the decisions that determine hiring outcomes.
-            </p>
+            <p>TALINTEL was built around a pattern seen repeatedly across industries and growth stages. Companies were investing heavily in hiring: new tools, larger teams, external support. Yet still making slow, inconsistent decisions that didn't hold up when pressure increased.</p>
+            <p className="font-semibold text-primary">The issue was rarely effort or budget. It was clarity.</p>
+            <p>Teams had data but no shared framework. Leaders had opinions but no aligned decision process. Systems existed, but failed when stakes rose.</p>
+            <p>TALINTEL exists to fix that by bringing structure, intelligence, and execution to the decisions that determine hiring outcomes.</p>
           </div>
         </motion.div>
 
-        {/* Founder Section */}
+        {/* Founder section */}
         <div className="space-y-12">
           <h3 className="text-2xl font-bold text-primary text-center uppercase tracking-widest">Founder</h3>
           <div className="grid md:grid-cols-12 gap-12 items-start">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6 }}
               className="md:col-span-4 lg:col-span-3"
             >
@@ -130,23 +104,17 @@ export function About() {
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6 }}
               className="md:col-span-8 lg:col-span-9 space-y-6 text-gray-600 leading-relaxed"
             >
-              <p>
-                Ryan MacDougall is a senior talent leader and advisor with deep experience building and scaling hiring systems in complex, global environments.
-              </p>
-              <p>
-                He has led talent functions, advised executive teams, and partnered closely with founders and leaders navigating periods of growth, transformation, and uncertainty.
-              </p>
-              <p>
-                His background spans startups and Fortune 500 organizations, with hands-on experience across North America, Europe, and APAC, bringing a practical understanding of how hiring strategies must adapt to different business realities and cultures.
-              </p>
+              <p>Ryan MacDougall is a senior talent leader and advisor with deep experience building and scaling hiring systems in complex, global environments.</p>
+              <p>He has led talent functions, advised executive teams, and partnered closely with founders and leaders navigating periods of growth, transformation, and uncertainty.</p>
+              <p>His background spans startups and Fortune 500 organizations, with hands-on experience across North America, Europe, and APAC, bringing a practical understanding of how hiring strategies must adapt to different business realities and cultures.</p>
               <motion.p 
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="text-primary font-medium italic border-l-3 border-accent pl-6 py-4 bg-gray-50 text-lg md:text-xl"
               >
