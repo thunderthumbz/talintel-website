@@ -101,7 +101,7 @@ export function Hero() {
                 size="lg" 
                 className="bg-accent hover:bg-accent/90 text-white font-semibold text-lg px-8 py-6 h-auto rounded-none uppercase tracking-wide transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_0_20px_rgba(56,182,255,0.6)]"
               >
-                Schedule a 30-minute diagnostic
+                Schedule a consultation
               </Button>
             </motion.div>
             <p className="text-sm text-gray-400 italic">
