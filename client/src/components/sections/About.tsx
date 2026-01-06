@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import founderImg from "@/assets/generated_images/ryan_LI.webp";
 import { Target, Users, Lightbulb, Settings } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useMobileScrollAnimation } from "@/hooks/use-mobile-scroll-animation";
 
 const values = [
   {
@@ -27,6 +28,8 @@ const values = [
 ];
 
 export function About() {
+  const isMobile = useMobileScrollAnimation();
+
   return (
     <section id="about" className="py-24 md:py-32 bg-white relative">
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
@@ -57,10 +60,10 @@ export function About() {
             {values.map((val, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20, rotate: -5 }}
-                whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.15 }}
+                initial={isMobile ? { opacity: 0, y: 20, rotate: -5 } : false}
+                whileInView={isMobile ? { opacity: 1, y: 0, rotate: 0 } : false}
+                viewport={isMobile ? { once: true } : false}
+                transition={isMobile ? { duration: 0.5, delay: i * 0.15 } : undefined}
               >
                 <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center group">
                   <CardContent className="p-6 pt-8">
@@ -107,10 +110,10 @@ export function About() {
           <h3 className="text-2xl font-bold text-primary text-center uppercase tracking-widest">Founder</h3>
           <div className="grid md:grid-cols-12 gap-12 items-start">
             <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              initial={isMobile ? { opacity: 0, x: -40 } : false}
+              whileInView={isMobile ? { opacity: 1, x: 0 } : false}
+              viewport={isMobile ? { once: true } : false}
+              transition={isMobile ? { duration: 0.6 } : undefined}
               className="md:col-span-4 lg:col-span-3"
             >
               <div className="relative">
@@ -128,10 +131,10 @@ export function About() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              initial={isMobile ? { opacity: 0, x: 40 } : false}
+              whileInView={isMobile ? { opacity: 1, x: 0 } : false}
+              viewport={isMobile ? { once: true } : false}
+              transition={isMobile ? { duration: 0.6 } : undefined}
               className="md:col-span-8 lg:col-span-9 space-y-6 text-gray-600 leading-relaxed"
             >
               <p>
@@ -144,10 +147,10 @@ export function About() {
                 His background spans startups and Fortune 500 organizations, with hands-on experience across North America, Europe, and APAC, bringing a practical understanding of how hiring strategies must adapt to different business realities and cultures.
               </p>
               <motion.p 
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                initial={isMobile ? { opacity: 0, scale: 0.95 } : false}
+                whileInView={isMobile ? { opacity: 1, scale: 1 } : false}
+                viewport={isMobile ? { once: true } : false}
+                transition={isMobile ? { duration: 0.5, delay: 0.3 } : undefined}
                 className="text-primary font-medium italic border-l-3 border-accent pl-6 py-4 bg-gray-50 text-lg md:text-xl"
               >
                 "I've made a career running toward hiring problems that other people avoid. The messy ones. The high-stakes ones. The ones where there's no time and too much at risk. That's where I do my best work. Good hiring is making decisions with better information and less noise. That's what TALINTEL does."

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Search, Globe, TrendingUp, Workflow, Bot, UserPlus } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { useMobileScrollAnimation } from "@/hooks/use-mobile-scroll-animation";
 
 const services = [
   {
@@ -87,6 +88,8 @@ const services = [
 ];
 
 export function Services() {
+  const isMobile = useMobileScrollAnimation();
+  
   return (
     <section id="what-we-do" className="py-24 bg-gray-50 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
@@ -130,10 +133,10 @@ export function Services() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
+              initial={isMobile ? { opacity: 0, y: 20 } : false}
+              whileInView={isMobile ? { opacity: 1, y: 0 } : false}
+              viewport={isMobile ? { once: true } : false}
+              transition={isMobile ? { duration: 0.5, delay: index * 0.15 } : undefined}
             >
               <Card
                 className={cn(
