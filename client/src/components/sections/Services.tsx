@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 const services = [
   {
     icon: Workflow,
-    title: "Process Optimization",
+    title: "Hiring Process Optimization",
     description: (
       <>
         Reduce decision time without lowering the bar.
