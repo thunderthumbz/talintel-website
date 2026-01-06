@@ -157,7 +157,7 @@ export function About() {
                 transition={isMobile ? { duration: 0.5, delay: 0.3 } : undefined}
                 className="text-primary font-medium italic border-l-3 border-accent pl-6 py-4 bg-gray-50 text-lg md:text-xl"
               >
-                "I've made a career running toward hiring problems that other people avoid. The messy ones. The high-stakes ones. The ones where there's no time and too much at risk. That's where I do my best work. Good hiring is making decisions with better information and less noise. That's what TALINTEL does."
+                "I've made a career running toward hiring problems that other people avoid. The messy, high-stakes ones where there's no time and too much at risk. That's where I do my best work. Good hiring is making decisions with better information and less noise. That's what TALINTEL does."
               </motion.p>
             </motion.div>
           </div>
