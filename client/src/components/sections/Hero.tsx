@@ -20,21 +20,21 @@ export function Hero() {
   };
 
   return (
-    <section id="hero" ref={ref} className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" ref={ref} className="relative h-screen flex items-center justify-center overflow-visible">
       {/* Background with Parallax */}
       <motion.div
         style={{ y, opacity }}
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 pointer-events-none"
       >
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
-        <div className="absolute inset-0 bg-primary/80 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-primary/80 mix-blend-multiply pointer-events-none" />
         
         {/* Animated Grid Overlay */}
         <motion.div 
-          className="absolute inset-0 opacity-[0.12]"
+          className="absolute inset-0 opacity-[0.12] pointer-events-none"
           initial={{ scale: 1, opacity: 0.08 }}
           animate={{ 
             scale: [1, 1.05, 1],

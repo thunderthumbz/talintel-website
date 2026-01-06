@@ -29,6 +29,10 @@ const values = [
 
 export function About() {
   const isMobile = useMobileScrollAnimation();
+  const mobileInit = { opacity: 0, y: 20, rotate: -5 };
+  const mobileAnimate = { opacity: 1, y: 0, rotate: 0 };
+  const desktopInit = { opacity: 0, y: 8 };
+  const desktopAnimate = { opacity: 1, y: 0 };
 
   return (
     <section id="about" className="py-24 md:py-32 bg-white relative">
@@ -60,10 +64,10 @@ export function About() {
             {values.map((val, i) => (
               <motion.div
                 key={i}
-                initial={isMobile ? { opacity: 0, y: 20, rotate: -5 } : undefined}
-                whileInView={isMobile ? { opacity: 1, y: 0, rotate: 0 } : undefined}
-                viewport={isMobile ? { once: true } : undefined}
-                transition={isMobile ? { duration: 0.5, delay: i * 0.15 } : undefined}
+                initial={isMobile ? mobileInit : desktopInit}
+                whileInView={isMobile ? mobileAnimate : desktopAnimate}
+                viewport={{ once: true, margin: "-20%" }}
+                transition={{ duration: 0.5, delay: i * 0.12 }}
               >
                 <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center group">
                   <CardContent className="p-6 pt-8">
@@ -110,10 +114,10 @@ export function About() {
           <h3 className="text-2xl font-bold text-primary text-center uppercase tracking-widest">Founder</h3>
           <div className="grid md:grid-cols-12 gap-12 items-start">
             <motion.div
-              initial={isMobile ? { opacity: 0, x: -40 } : undefined}
-              whileInView={isMobile ? { opacity: 1, x: 0 } : undefined}
-              viewport={isMobile ? { once: true } : undefined}
-              transition={isMobile ? { duration: 0.6 } : undefined}
+              initial={isMobile ? { opacity: 0, x: -40 } : { opacity: 0, x: -20 }}
+              whileInView={isMobile ? { opacity: 1, x: 0 } : { opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-20%" }}
+              transition={{ duration: 0.6 }}
               className="md:col-span-4 lg:col-span-3"
             >
               <div className="relative">
@@ -131,10 +135,10 @@ export function About() {
             </motion.div>
 
             <motion.div
-              initial={isMobile ? { opacity: 0, x: 40 } : undefined}
-              whileInView={isMobile ? { opacity: 1, x: 0 } : undefined}
-              viewport={isMobile ? { once: true } : undefined}
-              transition={isMobile ? { duration: 0.6 } : undefined}
+              initial={isMobile ? { opacity: 0, x: 40 } : { opacity: 0, x: 20 }}
+              whileInView={isMobile ? { opacity: 1, x: 0 } : { opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-20%" }}
+              transition={{ duration: 0.6 }}
               className="md:col-span-8 lg:col-span-9 space-y-6 text-gray-600 leading-relaxed"
             >
               <p>

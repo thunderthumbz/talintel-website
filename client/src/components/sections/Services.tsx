@@ -14,7 +14,7 @@ const services = [
         <br/><br/>
         We identify where hiring processes break under pressure and redesign them to produce consistent, high-quality decisions, without adding unnecessary steps or tools.
         <br/><br/>
-        <span className="text-primary font-semibold text-sm uppercase">Best for teams scaling engineering, product, or leadership under time constraints.</span>
+        <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for teams scaling engineering, product, or leadership under time constraints.</span>
       </>
     )
   },
@@ -27,7 +27,7 @@ const services = [
         <br/><br/>
         Embedded Head-of-Talent support for organizations navigating growth, restructuring, or transition, without committing to a full-time executive.
         <br/><br/>
-        <span className="text-primary font-semibold text-sm uppercase">Best for post-funding scaleups, new studios, or leadership gaps.</span>
+        <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for post-funding scaleups, new studios, or leadership gaps.</span>
       </>
     ),
     isCore: true
@@ -41,7 +41,7 @@ const services = [
         <br/><br/>
         We translate hiring data into clear insight: where risk is building, where pipelines fail, and what decisions need attention now, not later.
         <br/><br/>
-        <span className="text-primary font-semibold text-sm uppercase">Best for leadership teams who need clarity, not dashboards.</span>
+        <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for leadership teams who need clarity, not dashboards.</span>
       </>
     )
   },
@@ -54,7 +54,7 @@ const services = [
         <br/><br/>
         Targeted, discreet search for senior and leadership hires where judgment, alignment, and long-term fit matter more than speed alone.
         <br/><br/>
-        <span className="text-primary font-semibold text-sm uppercase">Best for executives, technical leaders, and mission-critical roles.</span>
+        <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for executives, technical leaders, and mission-critical roles.</span>
       </>
     ),
     isCore: true
@@ -68,7 +68,7 @@ const services = [
         <br/><br/>
         We map talent availability, compensation dynamics, and competitive hiring behavior to support expansion, location strategy, and critical role planning.
         <br/><br/>
-        <span className="text-primary font-semibold text-sm uppercase">Best for market entry, AI hiring, or organizational redesign.</span>
+        <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for market entry, AI hiring, or organizational redesign.</span>
       </>
     )
   },
@@ -81,7 +81,7 @@ const services = [
         <br/><br/>
         We help teams deploy automation and AI where it genuinely reduces friction and improves signal, without creating noise or false confidence.
         <br/><br/>
-        <span className="text-primary font-semibold text-sm uppercase">Best for organizations overwhelmed by tools but lacking clarity.</span>
+        <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for organizations overwhelmed by tools but lacking clarity.</span>
       </>
     )
   }
@@ -89,6 +89,10 @@ const services = [
 
 export function Services() {
   const isMobile = useMobileScrollAnimation();
+  const mobileInit = { opacity: 0, y: 20 };
+  const mobileAnimate = { opacity: 1, y: 0 };
+  const desktopInit = { opacity: 0, y: 10, scale: 0.995 };
+  const desktopAnimate = { opacity: 1, y: 0, scale: 1 };
   
   return (
     <section id="what-we-do" className="py-24 bg-gray-50 relative overflow-hidden">
@@ -133,10 +137,10 @@ export function Services() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={isMobile ? { opacity: 0, y: 20 } : undefined}
-              whileInView={isMobile ? { opacity: 1, y: 0 } : undefined}
-              viewport={isMobile ? { once: true } : undefined}
-              transition={isMobile ? { duration: 0.5, delay: index * 0.15 } : undefined}
+              initial={isMobile ? mobileInit : desktopInit}
+              whileInView={isMobile ? mobileAnimate : desktopAnimate}
+              viewport={{ once: true, margin: "-20%" }}
+              transition={{ duration: 0.5, delay: index * 0.12 }}
             >
               <Card
                 className={cn(
@@ -162,20 +166,7 @@ export function Services() {
                   </h3>
                   <div className="w-full h-[1px] bg-gray-100 mb-4" />
                   <div className="text-gray-600 text-base leading-[1.7] text-left">
-                    {typeof service.description === 'string' ? service.description : (
-                      <div className="description-content">
-                        {service.description.props.children.map((child: any, i: number) => {
-                          if (child && child.props && child.props.className && child.props.className.includes('text-primary')) {
-                            return (
-                              <span key={i} className="block mt-6 pt-4 border-t border-gray-100 italic text-gray-500 font-medium text-[13px] bg-gray-50/50 px-2 py-1.5 rounded">
-                                {child.props.children}
-                              </span>
-                            );
-                          }
-                          return child;
-                        })}
-                      </div>
-                    )}
+                    {service.description}
                   </div>
                 </CardContent>
               </Card>
