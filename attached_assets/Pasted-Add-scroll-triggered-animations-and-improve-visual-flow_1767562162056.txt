@@ -1,0 +1,81 @@
+Add scroll-triggered animations and improve visual flow between sections. Do not change content or layout.
+
+SCROLL ANIMATIONS:
+
+1. Global Fade-In Pattern:
+   - All major sections fade in and slide up (20px) when entering viewport
+   - Use Framer Motion's whileInView trigger
+   - Timing: 0.6s ease-out
+   - Threshold: trigger when 20% of element is visible
+   - Animate once: true (don't repeat on scroll up/down)
+
+2. Section-Specific Animations:
+
+   "What We Do" Section:
+   - Section title fades in first
+   - Intro paragraph fades in 200ms after title
+   - Service cards animate in sequence (already covered in Prompt 2)
+
+   "Why TALINTEL" Section:
+   - Main headline fades in with slight scale effect (95% to 100%)
+   - Four benefit cards fade in sequentially, 100ms stagger
+   - Outcome text fades in last
+
+   "For Candidates" Section:
+   - Left content (text) slides in from left
+   - Right content (dark box) slides in from right
+   - Both meet in middle, 0.6s duration
+
+   "About TALINTEL" Section:
+   - Values cards fade in with rotation effect (start at -5deg, end at 0deg)
+   - Stagger: 150ms between cards
+   - Story text paragraph fades in smoothly
+
+   Founder Section:
+   - Image fades in from left
+   - Text content fades in from right
+   - Pull quote scales up slightly (starts 95%, ends 100%)
+
+3. Visual Separators:
+   - Add subtle gradient dividers between major sections
+   - Dividers fade in when entering viewport
+   - Use teal to transparent gradient, 1px height
+
+4. Background Depth:
+   - Alternate section backgrounds: white → very light blue → white
+   - Transitions should be seamless with gradient overlays
+   - Creates visual rhythm without harsh boundaries
+
+PARALLAX EFFECTS (Subtle):
+
+1. Hero Section:
+   - Background elements move slightly slower than foreground on scroll
+   - Effect: 0.3 multiplier (very subtle, not dizzy-inducing)
+   - Only on desktop (disable on mobile)
+
+2. Section Backgrounds:
+   - Very subtle parallax on alternating sections
+   - Maximum 10-20px movement
+   - Must not affect readability
+
+PERFORMANCE OPTIMIZATION:
+
+- Use will-change CSS property sparingly
+- Implement intersection observer for scroll triggers
+- Lazy load animations (don't run until needed)
+- Reduce motion for users with prefers-reduced-motion
+- Test scroll performance: 60fps target
+
+TECHNICAL REQUIREMENTS:
+- Use Framer Motion's viewport detection
+- Maintain existing scroll behavior
+- Ensure mobile performance is smooth
+- Keep animations consistent with brand (professional, not flashy)
+
+DO NOT:
+- Add new content or sections
+- Change section order
+- Alter spacing dramatically
+- Create jarring or distracting animations
+
+Goal: Create smooth, elegant flow that guides user through content naturally.

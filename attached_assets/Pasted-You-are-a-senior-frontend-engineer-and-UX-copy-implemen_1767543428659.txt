@@ -1,0 +1,200 @@
+You are a senior frontend engineer and UX copy implementation assistant.
+Context
+Website: talintel.ai
+Goal: Update the homepage copy only, using the text provided below.
+Constraint: Do not redesign the site. Do not change layout, structure, navigation, or styling beyond what is required to fit the new copy cleanly.
+Treat this as a content replacement task, not a creative rewrite.
+Non-Negotiable Rules
+
+Do NOT invent new sections, pages, or features
+Do NOT add backend functionality
+Do NOT rename navigation items unless explicitly instructed
+Do NOT alter CSS except for minor spacing fixes if text overflows
+Preserve existing HTML structure wherever possible
+If a section already exists, replace its copy with the provided copy
+If a CTA already exists, rename it as instructed but keep the same button/link
+If something is unclear, default to minimal change
+
+
+TASK
+Replace the existing homepage copy with the following content, section by section, mapping it to the current homepage structure.
+
+HEADER / NAV
+Keep structure exactly the same.
+Text should read:
+
+TALINTEL
+What We Do
+Why TALINTEL
+For Candidates
+About
+Contact
+
+If there is a primary CTA button in the header, label it:
+"Schedule a 30-minute diagnostic"
+
+HERO SECTION
+Replace hero copy with:
+Headline:
+Strategic hiring clarity for EU & Nordics tech and gaming leaders
+Subheadline:
+TALINTEL helps CEOs, CTOs, and Heads of Talent de-risk critical leadership hires, build resilient talent pipelines, and turn hiring into a repeatable advantage, not a last-minute fire drill.
+Micro-proof line (small text under subheadline):
+20+ years leading global talent across tech and AAA gaming in NA, EU, and APAC.
+Primary CTA button text:
+Schedule a 30-minute diagnostic
+Micro-reassurance text below CTA:
+No pitch. A focused review of your current hiring risks and decisions.
+
+"WHAT WE DO" SECTION
+Replace the section intro paragraph with:
+TALINTEL works with companies where hiring outcomes matter and the margin for error is low.
+We focus on decision quality, clarity, and execution, especially when stakes are high and timelines are tight.
+This is not high-volume recruiting or theoretical advisory.
+It is senior-level talent judgment applied where it has the greatest business impact.
+
+SERVICES (Keep existing service cards / layout)
+Replace service copy as follows:
+Process Optimization
+Reduce decision time without lowering the bar.
+We identify where hiring processes break under pressure and redesign them to produce consistent, high-quality decisions, without adding unnecessary steps or tools.
+Best for teams scaling engineering, product, or leadership under time constraints.
+Fractional Talent Leadership (mark as Core offering if there is an existing visual option; otherwise text only)
+Senior talent leadership when it matters most.
+Embedded Head-of-Talent support for organizations navigating growth, restructuring, or transition, without committing to a full-time executive.
+Best for post-funding scaleups, new studios, or leadership gaps.
+Hiring Analytics & Forecasting
+Turn hiring activity into business signal.
+We translate hiring data into clear insight: where risk is building, where pipelines fail, and what decisions need attention now, not later.
+Best for leadership teams who need clarity, not dashboards.
+Executive Talent Search (Core offering)
+Precision search for roles that cannot fail.
+Targeted, discreet search for senior and leadership hires where judgment, alignment, and long-term fit matter more than speed alone.
+Best for executives, technical leaders, and mission-critical roles.
+Talent & Market Intelligence
+Make talent decisions with real market context.
+We map talent availability, compensation dynamics, and competitive hiring behavior to support expansion, location strategy, and critical role planning.
+Best for market entry, AI hiring, or organizational redesign.
+Automation & AI Implementation
+Use technology to support decisions, not replace them.
+We help teams deploy automation and AI where it genuinely reduces friction and improves signal, without creating noise or false confidence.
+Best for organizations overwhelmed by tools but lacking clarity.
+Bridge statement (keep as blockquote or italic if present):
+Each engagement is designed around real constraints: market conditions, internal capacity, and business priorities.
+
+"WHY TALINTEL" SECTION
+Replace headline with:
+Most hiring problems are not effort problems.
+They are decision problems.
+Replace body copy with:
+TALINTEL helps leadership teams:
+
+See the talent market clearly before committing budget or headcount
+Understand where pipelines break and why
+Reduce variance and bias in hiring decisions
+Build systems that perform under pressure, not just on paper
+
+Outcome line:
+The result: faster cycles, better hires, and fewer surprises when it matters most.
+
+CREDIBILITY / METRICS
+If counters currently show placeholder values (e.g. 0 years), replace them with text-only credibility statements:
+
+20+ years leading global talent initiatives
+Experience across North America, Europe, and APAC
+Senior-level focus on quality over volume
+Initial response within 24 to 48 hours
+
+Do NOT fabricate metrics.
+
+"FOR CANDIDATES" SECTION
+Compress copy to:
+Headline:
+For Candidates
+Body:
+TALINTEL works with candidates in a focused and intentional way.
+We engage only where there is real hiring intent, clear context, and a defined decision path.
+You can expect:
+
+Clear communication and realistic expectations
+Roles grounded in actual business needs, not speculation
+A process designed for signal, not noise
+
+Important note:
+We do not run mass outreach or generic pipelines.
+If we are in touch, there is a real role, real intent, and an active decision process.
+
+ABOUT TALINTEL
+Replace intro with:
+TALINTEL is a consulting and advisory firm focused on talent intelligence and execution for leadership teams in complex, competitive markets.
+We operate at the intersection of data, systems, and senior judgment to help companies hire with confidence, especially when the cost of getting it wrong is high.
+
+VALUES (keep layout)
+Clarity
+Focus on the roles, decisions, and signals that actually matter.
+Intelligence
+Data is only valuable when it improves judgment and action.
+Structure
+Strong hiring systems rely on consistency and follow-through under pressure.
+Accountability
+We work as partners. Outcomes matter.
+
+OUR STORY
+Replace with the following compressed version:
+TALINTEL was built around a pattern seen repeatedly across industries and growth stages.
+Companies were investing heavily in hiring: new tools, larger teams, external support. Yet still making slow, inconsistent decisions that didn't hold up when pressure increased.
+The issue was rarely effort or budget.
+It was clarity.
+Teams had data but no shared framework. Leaders had opinions but no aligned decision process. Systems existed, but failed when stakes rose.
+TALINTEL exists to fix that by bringing structure, intelligence, and execution to the decisions that determine hiring outcomes.
+
+FOUNDER SECTION
+Ensure this copy is used:
+Ryan MacDougall
+Founder & Principal
+Ryan MacDougall is a senior talent leader and advisor with deep experience building and scaling hiring systems in complex, global environments.
+He has led talent functions, advised executive teams, and partnered closely with founders and leaders navigating periods of growth, transformation, and uncertainty.
+His background spans startups and Fortune 500 organizations, with hands-on experience across North America, Europe, and APAC, bringing a practical understanding of how hiring strategies must adapt to different business realities and cultures.
+Closing line:
+His work is grounded in one principle: hiring decisions must hold up in practice, not just on paper.
+
+CONTACT SECTION
+Headline:
+Let's clarify your hiring decisions.
+Body:
+If you are navigating a critical hire, scaling a team, or questioning whether your hiring system is giving you the right signal, TALINTEL can help.
+Initial conversations are focused, practical, and diagnostic.
+
+FORM COPY CHANGES
+Primary form button: Request diagnostic call
+Helper text above form:
+
+Best for: leadership hires, system reviews, or strategic talent decisions
+You'll get: a 30-minute diagnostic with clear next steps
+Response time: within 24 to 48 hours
+
+Secondary CTA text (if present):
+Schedule a free consultation
+No pitch. Just clarity on whether we can help.
+Trust note:
+All inquiries are handled with strict discretion and confidentiality.
+
+FOOTER
+Ensure footer text reads:
+TALINTEL
+Talent. Intelligence. Clarity that scales.
+Stockholm, Sweden
+Connect
+hello@talintel.ai
+Follow us on LinkedIn
+Privacy
+We respect your privacy. We do not collect, store, or share personal data beyond form submissions.
+© 2026 TALINTEL Consulting. All rights reserved.
+
+FINAL INSTRUCTION
+After implementing:
+
+Verify no placeholder text remains
+Verify all CTAs point to existing links
+Verify mobile layout still reads cleanly
+Do NOT add new dependencies

@@ -1,0 +1,105 @@
+Refine typography, spacing, and add final polish touches. This is a refinement pass - make subtle improvements without major changes.
+
+TYPOGRAPHY REFINEMENTS:
+
+1. Headlines:
+   - Increase font weight contrast: H1 should be 800, H2 should be 700
+   - Adjust letter-spacing on large headlines: -0.02em for tighter, more premium look
+   - Ensure consistent headline hierarchy throughout site
+   - Add subtle gradient to main hero headline: dark blue to slightly lighter blue (vertical)
+
+2. Body Text:
+   - Increase line-height to 1.7 for improved readability
+   - Slightly increase paragraph spacing: 1.5rem between paragraphs
+   - Optimize font size for readability: 16-18px base, 14-16px on mobile
+   - Ensure consistent text colors: primary text should be same shade throughout
+
+3. Service Descriptions:
+   - "Best for" text should be styled distinctly: smaller, italic, lighter color
+   - Ensure descriptions are left-aligned for better scanability
+   - Add subtle divider between title and description
+
+4. Pull Quotes / Emphasis Text:
+   - Italic text should be slightly larger than surrounding text
+   - Add subtle left border to blockquotes: 3px teal line
+   - Increase padding around emphasized content
+
+SPACING & LAYOUT POLISH:
+
+1. Section Padding:
+   - Ensure consistent vertical spacing: 96px desktop, 64px mobile
+   - Adjust spacing between section title and content: 48px standard
+   - Create breathing room around CTAs: 32px padding
+
+2. Grid Alignment:
+   - Ensure all cards/elements align to consistent grid
+   - Check that columns line up across different sections
+   - Verify mobile stack order makes logical sense
+
+3. White Space:
+   - Increase white space around important CTAs
+   - Reduce crowding in dense text areas
+   - Add strategic negative space to draw eye to key elements
+
+VISUAL POLISH:
+
+1. Shadows:
+   - Standardize shadow depths: use 3-4 consistent shadow levels
+   - Light shadows for cards: rgba(0,0,0,0.05), 10px blur
+   - Medium shadows for elevated elements: rgba(0,0,0,0.1), 20px blur
+   - Deep shadows for hover states: rgba(0,0,0,0.15), 30px blur
+
+2. Borders & Lines:
+   - Ensure consistent border radius throughout: 12px for cards, 8px for buttons
+   - Border colors should be consistent: use rgba(34, 211, 238, 0.3) for teal borders
+   - Remove any accidental double borders
+
+3. Colors:
+   - Audit all colors for consistency
+   - Ensure sufficient contrast ratios (WCAG AA minimum)
+   - Teal accents should use exact same hex value throughout
+   - Background blues should be consistent shade
+
+4. Icons:
+   - Ensure all icons are same visual weight
+   - Consistent sizing: service icons 32px, small icons 20px
+   - All icons should align to grid properly
+
+MOBILE REFINEMENTS:
+
+1. Typography:
+   - Reduce headline sizes by 20-30% on mobile
+   - Ensure minimum 16px font size for body text (iOS zoom prevention)
+   - Adjust line height: slightly tighter on mobile for better vertical space usage
+
+2. Spacing:
+   - Reduce section padding on mobile to 48px
+   - Ensure adequate tap targets: minimum 44x44px
+   - Check that form inputs have comfortable spacing
+
+3. Layout:
+   - Verify all elements stack logically on narrow screens
+   - Ensure no horizontal scroll on any screen size
+   - Check that images scale appropriately
+
+ACCESSIBILITY FINAL CHECKS:
+
+- All interactive elements have focus states
+- Color contrast meets WCAG AA standards
+- Alt text present on all images
+- Form labels properly associated
+- Headings follow semantic hierarchy (H1 → H2 → H3)
+
+TECHNICAL REQUIREMENTS:
+- Use Tailwind utility classes where possible
+- Maintain existing responsive breakpoints
+- Test on multiple screen sizes: 320px, 768px, 1024px, 1920px
+- Ensure changes don't affect page load performance
+
+DO NOT:
+- Change any content or copy
+- Alter fundamental layout structure
+- Add new components or sections
+- Change color scheme (only standardize existing colors)
+
+Goal: Achieve pixel-perfect polish and professional consistency throughout.

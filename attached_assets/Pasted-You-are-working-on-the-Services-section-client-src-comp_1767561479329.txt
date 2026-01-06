@@ -1,0 +1,88 @@
+You are working on the Services section (client/src/components/sections/Services.tsx). Enhance the existing hover interactions and visual effects. The code already has good structure - we're polishing it further.
+
+CURRENT STATE ANALYSIS:
+- Already has: hover shadow, translate-y, group hover, motion animations ✓
+- Already has: Core offering distinction with accent color ✓
+- Already has: Icon background color transition ✓
+
+ENHANCEMENTS TO ADD:
+
+1. Strengthen Hover Effect:
+   Current: hover:shadow-xl hover:-translate-y-2
+   Change to: hover:shadow-2xl hover:-translate-y-3
+   Add: hover:scale-[1.02] (subtle scale for depth)
+   Keep: transition-all duration-300
+
+2. Core Offering Enhancement:
+   Current: border-l-accent ring-1 ring-accent/20
+   Add on hover: ring-accent/40 (intensify ring on hover)
+   Add: subtle glow effect with box-shadow: 0 0 20px rgba(34, 211, 238, 0.2)
+   Make "Core Offering" badge more prominent:
+   - Increase font size to text-[11px]
+   - Add subtle drop shadow to badge
+   - Consider: rounded-sm instead of sharp corners
+
+3. Icon Animation Enhancement:
+   Current: Icon changes color on group hover
+   Add: transform scale-110 and rotate-6 on group hover
+   Example: group-hover:scale-110 group-hover:rotate-6
+   Keep: smooth transition-all duration-300
+
+4. Title Enhancement:
+   Current: group-hover:text-accent
+   Add: Add subtle underline that slides in on hover
+   Use: after pseudo-element with width animation
+   Or simply: underline decoration-accent decoration-2 underline-offset-4 on hover
+
+5. Stagger Animation Refinement:
+   Current delay: index * 0.1
+   Change to: index * 0.15 (slightly more noticeable stagger)
+   Keep everything else the same
+
+6. "Best for" Text Styling:
+   Current: text-primary font-semibold text-sm uppercase
+   Add distinctive styling:
+   - Wrap in a subtle background: bg-gray-50 px-2 py-1 rounded
+   - Or add a top border: border-t border-gray-200 pt-3 mt-3
+   - Or make it italic: italic text-xs
+   Choose whichever looks best with existing design
+
+7. Card Border Enhancement:
+   Current: border-l-4 with secondary/accent
+   On hover: make border slightly glow or pulse
+   Add: transition-colors to the border itself
+
+MOBILE OPTIMIZATION:
+   - Reduce hover:-translate-y to hover:-translate-y-1 on mobile
+   - Remove scale effect on mobile (< md breakpoint)
+   - Ensure cards don't overlap on small screens
+   - Keep tap feedback: active:scale-[0.98]
+
+TECHNICAL IMPLEMENTATION:
+   - Use existing Tailwind classes where possible
+   - Maintain existing Framer Motion setup
+   - Keep existing group hover pattern
+   - Test that all animations are smooth (60fps)
+   - Ensure animations respect prefers-reduced-motion
+
+ACCESSIBILITY:
+   - Ensure focus states are visible (add focus:ring-2 focus:ring-accent)
+   - Maintain keyboard navigation
+   - Keep existing semantic HTML structure
+
+DO NOT:
+   - Change the card grid layout (keep grid-cols-1 md:grid-cols-2 lg:grid-cols-3)
+   - Alter service descriptions or titles
+   - Change the icon set
+   - Modify the bottom quote section
+   - Add new services or remove existing ones
+   - Change fundamental spacing or padding
+
+RESULT EXPECTATIONS:
+   - Cards should feel more premium and interactive
+   - Core offerings should clearly stand out
+   - Hover states should feel polished and intentional
+   - Mobile experience remains smooth
+   - Overall: subtle but noticeable improvement
+
+Test the changes and ensure they enhance rather than distract from the content.

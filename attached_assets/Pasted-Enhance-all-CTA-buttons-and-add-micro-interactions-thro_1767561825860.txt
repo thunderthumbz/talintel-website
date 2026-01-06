@@ -1,0 +1,64 @@
+Enhance all CTA buttons and add micro-interactions throughout. Do not change button text or placement.
+
+CTA BUTTON ENHANCEMENTS:
+
+1. Primary CTA Buttons (Schedule a 30-minute diagnostic, Request diagnostic call):
+   - Add subtle pulsing glow animation: 2s loop, gentle in/out
+   - Glow color: teal/cyan (rgba(34, 211, 238, 0.4))
+   - On hover: button scales to 102% with smooth transition
+   - On hover: background lightens slightly, glow intensifies
+   - On click: brief scale down to 98% then back (tactile feedback)
+   - Add ripple effect on click (optional, if time permits)
+
+2. Secondary CTA Buttons (Book a Time):
+   - On hover: border thickens from 2px to 3px
+   - Background transitions from transparent to subtle teal overlay
+   - Text color shifts slightly brighter
+   - Smooth 0.3s transition
+
+3. Navigation Menu:
+   - Nav links get subtle underline animation on hover: slides in from left, teal color
+   - Active section indicator: small teal dot or underline
+   - Smooth scroll to section when clicked (if not already implemented)
+
+4. Form Inputs:
+   - Focus state: teal border with subtle glow
+   - Validation states: green glow for valid, red for errors
+   - Placeholder text fades more elegantly on focus
+
+5. Scroll Behavior:
+   - Add smooth scroll throughout site
+   - Navbar background becomes slightly more opaque when scrolled (if transparent)
+   - Add subtle fade-in for navbar on scroll down
+
+MICRO-INTERACTIONS TO ADD:
+
+1. Checkmarks (Why TALINTEL section):
+   - Animate checkmarks when scrolling into view
+   - Draw-in animation: stroke-dasharray effect, 0.5s duration
+   - Stagger: 100ms delay between each
+
+2. Stats/Numbers (Credibility section):
+   - Count-up animation when scrolling into view
+   - Smooth easing, 1.5s duration
+   - Only animate once per session
+
+3. Icons Throughout:
+   - Subtle scale on hover (105%)
+   - Brief rotation or bounce on first render
+   - Consistent timing: 0.3s ease
+
+TECHNICAL REQUIREMENTS:
+- Use Framer Motion for complex animations
+- Use CSS transitions for simple hover effects
+- Ensure all animations respect prefers-reduced-motion
+- Test performance on mobile devices
+- Maintain existing button functionality (links work correctly)
+
+DO NOT:
+- Change button text or calls-to-action
+- Alter button positions or layout
+- Add new buttons
+- Change color scheme beyond specified enhancements
+
+Ensure all interactions feel polished and intentional, not gimmicky.

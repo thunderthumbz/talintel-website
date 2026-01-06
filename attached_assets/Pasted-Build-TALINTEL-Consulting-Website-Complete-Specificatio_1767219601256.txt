@@ -1,0 +1,244 @@
+Build TALINTEL Consulting Website - Complete Specifications
+Overview
+Create a modern, professional single-page website for TALINTEL Consulting, a talent intelligence and executive search firm. The site must be fully responsive (mobile, tablet, desktop), feature parallax scrolling effects, and convey professionalism with a futuristic aesthetic.
+
+Brand Identity & Design Requirements
+Logo
+Company name: TALINTEL (always bold, no tagline below it)
+TAL in bright blue #38b6ff
+INTEL in white #ffffff (with dark outline when on white backgrounds)
+Font: Arimo, bold weight
+No decorative lines, dots, or "Consulting" text
+Color Palette (USE EXACTLY THESE)
+Primary Dark Blue: #003366 (headers, footer, dark sections)
+Bright Blue: #38b6ff (logo TAL, CTAs, links)
+Aqua Green: #00c6aa (accents, hover effects)
+Black: #000000 (body text)
+White: #ffffff (text on dark backgrounds)
+Light Gray: #eeeeee (alternating section backgrounds)
+Typography
+Headings: Montserrat, 600 weight
+Body Text: Roboto, 400 weight, 1.6 line height
+Logo: Arimo, 700 weight
+Design Style
+Clean, minimalist with ample whitespace
+Subtle parallax scrolling effects on sections
+Smooth animations and transitions
+Professional hover effects
+Modern, futuristic aesthetic
+High contrast for readability
+
+Website Structure (Single-Page with Smooth Scrolling Navigation)
+Navigation Bar (Sticky/Fixed)
+Logo: TALINTEL (left side)
+Menu items (right side):
+What We Do
+Why TALINTEL
+For Candidates
+About
+Contact
+Mobile: Hamburger menu
+Background: White with backdrop blur when scrolled
+
+Section 1: HERO (Full viewport height, parallax background)
+Content:
+[TALINTEL Logo - large]
+
+Tagline (in italics, aqua green color):
+"Talent. Intelligence. Decisions that hold up."
+
+Brief description:
+We support companies where hiring outcomes matter and margin for error is low. Our work focuses on clarity, decision quality, and execution.
+
+[CTA Button: "Get in Touch" - links to #contact section]
+Design Notes:
+Dark blue gradient background (#003366 to slightly lighter)
+Subtle geometric patterns or grid overlay
+Parallax effect on background
+White text
+Large, impactful typography
+CTA button: Aqua green background, hover effect
+
+Section 2: WHAT WE DO (Light background, parallax elements)
+Headline: What We Do
+Intro Paragraph: "TALINTEL supports companies where hiring outcomes matter and margin for error is low. Our work focuses on clarity, decision quality, and execution, not volume or theory."
+Services (Display as 6 cards in grid - 3 columns on desktop, 2 on tablet, 1 on mobile):
+Executive Talent Search Targeted sourcing for critical leadership roles where precision and discretion matter.
+Talent & Market Intelligence Real-time insights on talent availability, compensation trends, and competitive dynamics.
+Hiring Analytics & Forecasting Dashboards and data models that translate hiring activity into actionable business intelligence.
+Process Optimization Streamlined workflows that reduce time-to-hire without sacrificing decision quality.
+Automation & AI Implementation Strategic deployment of technology to enhance efficiency and reduce manual overhead.
+Fractional Talent Leadership Embedded expertise for organizations that need senior talent guidance without full-time commitment.
+Closing Statement (in dark box with white text, centered): "Each engagement is designed around real constraints: market conditions, internal capacity, and business priorities."
+Design Notes:
+Cards with subtle shadow, border-left accent (bright blue)
+Hover effect: lift up, increase shadow
+Parallax on cards (slight movement on scroll)
+
+Section 3: WHY TALINTEL (Light gray background, animated stats)
+Headline: Why TALINTEL
+Opening Statement (large, centered, italic): "Most hiring problems are not effort problems. They are decision problems."
+Subheading: We help leadership teams:
+Benefits (4 items in clean list format with checkmarks or icons):
+See the market clearly before committing budget or headcount
+Understand where pipelines break and why
+Reduce variance in hiring decisions
+Build systems that perform under pressure
+Result Statement (large, centered, bold): "The result is faster cycles, better hires, and fewer surprises."
+ANIMATED METRICS/STATISTICS (Display as 3-4 animated counters): Create visually appealing animated statistics such as:
+"15+" Years Combined Experience (animate counting up)
+"3" Continents (NA, EU, APAC)
+"100%" Focus on Quality Over Volume
+"24-48h" Initial Response Time
+Design Notes:
+Benefits displayed as cards with left border accent (aqua green)
+Subtle parallax on benefit cards
+Animated counters that trigger when scrolled into view
+Clean, modern number displays
+
+Section 4: FOR CANDIDATES (White background)
+Headline: For Candidates
+Intro: "TALINTEL works with candidates in a focused and intentional way."
+You Can Expect (in styled box with checkmarks):
+Clear communication and realistic context
+Roles grounded in actual hiring needs, not speculation
+A process designed for signal, not noise
+Important Note (in dark blue box, white text, centered): "We do not run mass outreach or generic pipelines. If we are in touch, there is a real role, real intent, and a defined decision path."
+Design Notes:
+Expectations list in white card with checkmarks (aqua green)
+Parallax effect on the note box
+
+Section 5: ABOUT TALINTEL (Light gray background, parallax elements)
+Headline: About TALINTEL
+Subsection: WHO WE ARE
+"TALINTEL is a consulting and advisory firm focused on talent intelligence and execution. We operate at the intersection of data, systems, and leadership to help companies hire with confidence in competitive and uncertain markets."
+Subsection: OUR FOUNDER
+Layout: Photo on left (250x250px, rounded corners), bio text on right
+Photo placeholder: [Professional photo of Ryan MacDougall]
+Bio Text: "Ryan MacDougall is a senior talent operator and advisor with deep experience building and scaling hiring systems in complex, global environments. Throughout his career, he has led talent functions, advised executive teams, and partnered closely with founders and leaders navigating periods of growth, transformation, and constraint.
+Ryan's background spans both startups and Fortune 500 companies, giving him unique insight into how hiring strategies must adapt to different business realities. He has led and developed teams across North America, Europe, and APAC, shaping global talent operations that balance local nuance with organizational scale.
+An expatriate who has lived and worked in both North America and Europe, Ryan brings a deep appreciation for the role culture plays — not just across geographies, but within companies themselves. His work is grounded in one principle: hiring decisions must hold up in practice, not just on paper."
+Subsection: OUR STORY
+"TALINTEL started from a pattern Ryan kept seeing. Companies were investing heavily in hiring: buying tools, running searches, and building teams. Yet they were still making slow, inconsistent decisions that didn’t hold up under pressure.
+The problem wasn’t effort or budget. It was clarity.
+Hiring teams were drowning in data but starving for insight. Leaders had opinions but no shared framework. Processes existed on paper but broke down in practice. And when markets shifted or urgency hit, systems that looked fine in theory collapsed.
+TALINTEL was built to fix that. Not by adding more tools or theory, but by bringing structure, intelligence, and execution to the parts of hiring that actually determine outcomes—how decisions get made, how quickly teams can move, and whether the system performs when it matters.
+We work with companies where hiring isn’t a volume game. It’s a precision problem, where every role is critical, every mishire is expensive, and the margin for error is low.
+Our approach is simple: see the market clearly, decide with confidence, and execute without waste."
+Subsection: WHAT WE STAND FOR
+Display as 4 cards in grid (2x2 on desktop, 2x1 on tablet, 1 column on mobile):
+Precision We focus on the roles, decisions, and signals that matter. No excess activity. No unnecessary noise.
+Accountability We operate as partners, not observers. Outcomes matter.
+Intelligence Data is only useful when it improves judgment. We prioritize insight that informs real decisions.
+Discipline Strong hiring systems rely on structure, consistency, and follow-through. We help teams hold the line.
+Design Notes:
+Founder section: 2-column grid (photo + bio) on desktop, stacked on mobile
+Value cards with icons, centered text
+Subtle parallax on cards
+Hover effects on value cards
+
+Section 6: CONTACT (White background, calendar integration)
+Headline: Contact
+Intro: "If you are navigating a critical hire, scaling a team, or questioning whether your hiring system is giving you the right signal, TALINTEL can help."
+Contact Methods (2 cards side-by-side):
+Card 1: Email info@talintel.ai (Make email clickable: mailto:info@talintel.ai)
+Card 2: LinkedIn TALINTEL Consulting (Make clickable - opens in new tab)
+CONTACT FORM (Professional styling):
+Form Fields:
+Name * (required)
+Email * (required)
+Company (optional)
+Message * (required, text area)
+[Submit Button: "Send Message"]
+Form Requirements:
+Validation for required fields
+Email format validation
+Success message after submission
+Error handling
+Spam protection (honeypot or reCAPTCHA)
+CALENDAR SCHEDULING INTEGRATION: Add an embedded calendar scheduling tool (like Calendly, Cal.com, or similar) with:
+Heading: "Schedule a Consultation"
+Inline calendar embed or "Book a Time" button
+Should open scheduling interface
+Clean integration that matches site design
+Closing Note (centered, italic, gray text): "Initial conversations are focused, practical, and diagnostic. No pitch. Just clarity on whether we can help."
+Design Notes:
+Contact cards with icons
+Form with modern styling, good spacing
+Submit button: bright blue background, hover effect (aqua green)
+Calendar embed styled to match site colors
+
+Section 7: FOOTER (Dark blue background, white text)
+Layout: 3 columns on desktop, stacked on mobile
+Column 1: Brand TALINTEL "Talent. Intelligence. Decisions that hold up." Stockholm, Sweden
+Column 2: Connect
+info@talintel.ai (clickable)
+LinkedIn (clickable, opens in new tab)
+Column 3: Privacy "We respect your privacy. We do not collect, store, or share personal data through this website beyond form submissions."
+Bottom Bar (centered): © 2025 TALINTEL Consulting. All rights reserved.
+Design Notes:
+Dark blue (#003366) background
+White text
+Links in aqua green
+Subtle separation line above bottom bar
+
+Technical Requirements
+Must-Have Features:
+Parallax Scrolling: Subtle parallax effects on hero background, section backgrounds, and cards
+Smooth Scrolling: Navigation links scroll smoothly to sections
+Sticky Navigation: Nav bar stays at top when scrolling, with backdrop blur effect
+Mobile Responsive: Perfect layout on all devices (320px+)
+Animations:
+Fade-in on scroll for sections
+Counter animations for statistics
+Hover effects on cards and buttons
+Smooth transitions (0.3s)
+Contact Form: Working form with validation
+Calendar Integration: Embedded scheduling tool
+Scroll to Top Button: Appears after scrolling down
+Performance: Fast loading (under 3 seconds)
+Accessibility: Proper semantic HTML, alt tags, ARIA labels
+Mobile Optimization:
+Hamburger menu for navigation
+Touch-friendly buttons (min 44px)
+Optimized images
+Single column layouts on mobile
+Readable font sizes (minimum 16px)
+No horizontal scrolling
+Animation Guidelines:
+Subtle, professional animations (nothing distracting)
+Stats counter animates when scrolled into view
+Cards fade in with slight upward motion
+Parallax should be gentle (not excessive movement)
+All animations should work smoothly on mobile
+
+Content Tone & Voice
+Professional but approachable
+Direct and confident
+No marketing fluff or buzzwords
+Focused on outcomes and value
+Honest and transparent
+
+Success Criteria
+✓ Loads in under 3 seconds ✓ Looks professional and modern ✓ Perfect on mobile, tablet, and desktop ✓ Parallax effects work smoothly ✓ Contact form submits successfully ✓ Calendar scheduling works ✓ All links functional ✓ Animations enhance (not distract) ✓ Conveys expertise and trustworthiness immediately
+
+DO NOT Include:
+Cookie banners (unless legally required)
+Pop-ups
+Chat widgets
+Excessive animations
+Stock photos of random business people
+Generic corporate imagery
+Social media feeds
+Blog section
+Testimonials (not provided)
+
+Deliverables Required:
+Complete, deployable website
+All code files (HTML, CSS, JavaScript)
+Instructions for deploying
+Instructions for updating content
+Instructions for connecting custom domain
+Mobile preview/testing confirmation
+
+Build this as a complete, production-ready website. Prioritize clean design, fast performance, and flawless mobile experience.
