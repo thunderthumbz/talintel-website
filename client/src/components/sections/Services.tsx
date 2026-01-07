@@ -14,7 +14,7 @@ const services = [
         <br/><br/>
         We identify where hiring processes break under pressure and redesign them to produce consistent, high-quality decisions, without adding unnecessary steps or tools.
         <br/><br/>
-        <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for teams scaling engineering, product, or leadership under time constraints.</span>
+        <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for teams scaling engineering, product, or leadership hires under time constraints.</span>
       </>
     )
   },
@@ -41,7 +41,7 @@ const services = [
         <br/><br/>
         We turn your recruiting data into clear, actionable insight with tailored dashboards that guide planning, reveal risks, and highlight trends before they impact results.
         <br/><br/>
-        <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for leadership teams who need clarity, not dashboards.</span>
+        <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for leadership teams who need clarity and course correction, not vanity metrics.</span>
       </>
     )
   },
@@ -68,18 +68,18 @@ const services = [
         <br/><br/>
         We map talent availability, compensation dynamics, and competitive hiring behavior to support expansion, location strategy, and critical role planning.
         <br/><br/>
-        <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for market entry, AI hiring, or organizational redesign.</span>
+        <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for expansion planning, location strategy, and high-impact hiring decisions.</span>
       </>
     )
   },
   {
     icon: Bot,
-    title: "Automation & AI Implementation",
+    title: "Automation & AI Advisory",
     description: (
       <>
         Use technology to support decisions, not replace them.
         <br/><br/>
-        We help teams deploy automation and AI where it genuinely reduces friction and improves signal, without creating noise or false confidence.
+        We guide teams to use automation and AI wisely, focusing on what’s practical and aligned with their needs rather than chasing the newest tools.
         <br/><br/>
         <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for organizations overwhelmed by tools but lacking clarity.</span>
       </>
