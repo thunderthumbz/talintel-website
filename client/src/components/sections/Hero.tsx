@@ -77,7 +77,7 @@ export function Hero() {
           </h2>
 
           <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-[1.6] font-light">
-            TALINTEL helps CEOs, CTOs, and Heads of Talent de-risk critical leadership hires, build resilient talent pipelines, and turn hiring into a repeatable advantage, not a last-minute fire drill.
+            TALINTEL helps executive and talent leaders de-risk critical hires, build resilient talent pipelines, and turn hiring into a repeatable strategic advantage.
           </p>
           
           <div className="text-sm font-medium text-gray-300 uppercase tracking-widest mt-4">
