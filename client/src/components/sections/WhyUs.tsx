@@ -39,12 +39,13 @@ export function WhyUs() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="flex items-start gap-4 p-6 bg-gray-50 rounded-lg shadow-sm border-l-4 border-accent hover:shadow-md transition-shadow group"
               >
-                <div className="mt-1 bg-accent/10 p-1 rounded-full overflow-hidden">
+                <div className="flex items-center justify-center w-7 h-7 mt-1 bg-accent/10 rounded-full overflow-hidden">
                   <motion.div
                     initial={{ pathLength: 0, opacity: 0 }}
                     whileInView={{ pathLength: 1, opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.2 + (i * 0.1) }}
+                    className="w-5 h-5"
                   >
                     <Check className="w-5 h-5 text-accent transition-transform duration-300 group-hover:scale-110" />
                   </motion.div>
