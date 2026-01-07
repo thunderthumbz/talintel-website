@@ -37,9 +37,9 @@ const services = [
     title: "Hiring Analytics & Forecasting",
     description: (
       <>
-        Turn hiring activity into business signal.
+        Turn hiring activity into business intelligence.
         <br/><br/>
-        We translate hiring data into clear insight: where risk is building, where pipelines fail, and what decisions need attention now, not later.
+        We turn your recruiting data into clear, actionable insight with tailored dashboards that guide planning, reveal risks, and highlight trends before they impact results.
         <br/><br/>
         <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for leadership teams who need clarity, not dashboards.</span>
       </>
