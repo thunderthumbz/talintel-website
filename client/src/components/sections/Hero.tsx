@@ -73,11 +73,11 @@ export function Hero() {
             className="text-3xl md:text-5xl font-extrabold font-heading uppercase tracking-tighter bg-gradient-to-b from-white via-white to-white/70 bg-clip-text text-transparent"
             style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)', letterSpacing: '-0.02em' }}
           >
-            Strategic hiring clarity for tech and gaming leaders
+            Clear, strategic hiring for tech and gaming leaders
           </h2>
 
           <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-[1.6] font-light">
-            TALINTEL helps executive and talent leaders de-risk critical hires, build resilient talent pipelines, and turn hiring into a repeatable strategic advantage.
+            TALINTEL partners with executive and talent leaders to de-risk critical hires, strengthen talent pipelines, and position hiring as a repeatable strategic advantage.
           </p>
           
           <div className="text-sm font-medium text-gray-300 uppercase tracking-widest mt-4">
