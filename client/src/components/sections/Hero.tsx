@@ -73,7 +73,7 @@ export function Hero() {
             className="text-3xl md:text-5xl font-extrabold font-heading uppercase tracking-tighter bg-gradient-to-b from-white via-white to-white/70 bg-clip-text text-transparent"
             style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)', letterSpacing: '-0.02em' }}
           >
-            Strategic hiring clarity for Europe's tech and gaming leaders
+            Strategic hiring clarity for tech and gaming leaders
           </h2>
 
           <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-[1.6] font-light">
