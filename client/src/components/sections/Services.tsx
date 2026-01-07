@@ -14,7 +14,7 @@ const services = [
         <br/><br/>
         We identify where hiring processes break under pressure and redesign them to produce consistent, high-quality decisions, without adding unnecessary steps or tools.
         <br/><br/>
-        <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for teams scaling engineering, product, or leadership hires under time constraints.</span>
+        <span className="inline-block ml-0 mt-4 px-4 py-1 text-[13px] font-semibold uppercase rounded-lg bg-gray-100 text-primary break-words transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for teams scaling engineering, product, or leadership hires under time constraints.</span>
       </>
     )
   },
@@ -27,7 +27,7 @@ const services = [
         <br/><br/>
         Embedded Head-of-Talent support for organizations navigating growth, restructuring, or transition, without committing to a full-time executive.
         <br/><br/>
-        <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for post-funding scaleups, new studios, or leadership gaps.</span>
+        <span className="inline-block ml-0 mt-4 px-4 py-1 text-[13px] font-semibold uppercase rounded-lg bg-gray-100 text-primary break-words transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for post-funding scaleups, new studios, or leadership gaps.</span>
       </>
     ),
     isCore: true
@@ -41,7 +41,7 @@ const services = [
         <br/><br/>
         We turn your recruiting data into clear, actionable insight with tailored dashboards that guide planning, reveal risks, and highlight trends before they impact results.
         <br/><br/>
-        <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for leadership teams who need clarity and course correction, not vanity metrics.</span>
+        <span className="inline-block ml-0 mt-4 px-4 py-1 text-[13px] font-semibold uppercase rounded-lg bg-gray-100 text-primary break-words transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for leadership teams who need clarity and course correction, not vanity metrics.</span>
       </>
     )
   },
@@ -54,7 +54,7 @@ const services = [
         <br/><br/>
         Targeted, discreet search for senior and leadership hires, niche technical specialists, and hard-to-fill positions where quality, alignment, and long-term fit matter more than speed.
         <br/><br/>
-        <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for executives, technical leaders, and mission-critical roles.</span>
+        <span className="inline-block ml-0 mt-4 px-4 py-1 text-[13px] font-semibold uppercase rounded-lg bg-gray-100 text-primary break-words transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for executives, technical leaders, and mission-critical roles.</span>
       </>
     ),
     isCore: true
@@ -68,7 +68,7 @@ const services = [
         <br/><br/>
         We map talent availability, compensation dynamics, and competitive hiring behavior to support expansion, location strategy, and critical role planning.
         <br/><br/>
-        <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for expansion planning, location strategy, and high-impact hiring decisions.</span>
+        <span className="inline-block ml-0 mt-4 px-4 py-1 text-[13px] font-semibold uppercase rounded-lg bg-gray-100 text-primary break-words transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for expansion planning, location strategy, and high-impact hiring decisions.</span>
       </>
     )
   },
@@ -81,7 +81,7 @@ const services = [
         <br/><br/>
         We guide teams to use automation and AI wisely, focusing on what’s practical and aligned with their needs rather than chasing the newest tools.
         <br/><br/>
-        <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for organizations overwhelmed by tools but lacking clarity.</span>
+        <span className="inline-block ml-0 mt-4 px-4 py-1 text-[13px] font-semibold uppercase rounded-lg bg-gray-100 text-primary break-words transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for organizations overwhelmed by tools but lacking clarity.</span>
       </>
     )
   }
