@@ -125,10 +125,10 @@ export function Services() {
               TALINTEL works with companies where hiring outcomes matter and the margin for error is low.
             </p>
             <p>
-              We focus on decision quality, clarity, and execution, especially when stakes are high and timelines are tight.
+              We deliver quality, clarity, and execution when the stakes are high and the timelines are tight.
             </p>
             <p>
-              This is not high-volume recruiting or theoretical advisory. It is senior-level talent judgment applied where it has the greatest business impact.
+              No volume. No theory. Only impact.
             </p>
           </motion.div>
         </motion.div>
