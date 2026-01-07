@@ -13,7 +13,7 @@ const values = [
   {
     icon: Lightbulb,
     title: "Intelligence",
-    text: "Data is only valuable when it improves judgment and action."
+    text: "Data is only valuable when it guides smarter decisions and meaningful action."
   },
   {
     icon: Settings,
@@ -95,13 +95,13 @@ export function About() {
           <div className="space-y-4 text-gray-600">
             <p>
               TALINTEL was built around a pattern seen repeatedly across industries and growth stages. 
-              Companies were investing heavily in hiring: new tools, larger teams, external support. Yet still making slow, inconsistent decisions that didn't hold up when pressure increased.
+              Companies were investing heavily in hiring: new tools, larger teams, and external support. Yet still making slow, inconsistent decisions that didn't hold up when pressure increased.
             </p>
             <p className="font-semibold text-primary">
               The issue was rarely effort or budget. It was clarity.
             </p>
             <p>
-              Teams had data but no shared framework. Leaders had opinions but no aligned decision process. Systems existed, but failed when stakes rose.
+              Teams had data but no shared framework. Leaders had opinions but no aligned decision process. Systems existed, but failed when the stakes rose.
             </p>
             <p>
               TALINTEL exists to fix that by bringing structure, intelligence, and execution to the decisions that determine hiring outcomes.
@@ -157,7 +157,7 @@ export function About() {
                 transition={isMobile ? { duration: 0.5, delay: 0.3 } : undefined}
                 className="text-primary font-medium italic border-l-3 border-accent pl-6 py-4 bg-gray-50 text-lg md:text-xl"
               >
-                "I've made a career running toward hiring problems that other people avoid. The messy, high-stakes ones where there's no time and too much at risk. That's where I do my best work. Good hiring is making decisions with better information and less noise. That's what TALINTEL does."
+                "I've made a career running toward hiring problems that other people avoid. The messy, high-stakes ones where there's no time and too much at risk. That's where I do my best work. TALINTEL turns complexity into clarity so you can hire smarter, faster, and protect your brand reputation."
               </motion.p>
             </motion.div>
           </div>
