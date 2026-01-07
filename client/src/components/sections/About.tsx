@@ -53,7 +53,7 @@ export function About() {
           </h2>
           <p className="text-lg md:text-xl text-gray-700 leading-[1.7]">
             TALINTEL is a consulting and advisory firm focused on talent intelligence and execution for leadership teams in complex, competitive markets. 
-            We operate at the intersection of data, systems, and senior judgment to help companies hire with confidence, especially when the cost of getting it wrong is high.
+            We operate at the intersection of data, systems, and experience to help companies hire with confidence, especially when the cost of getting it wrong is high.
           </p>
         </motion.div>
 
