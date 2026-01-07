@@ -12,7 +12,7 @@ export function Footer() {
               <span className="text-white">INTEL</span>
             </span>
             <p className="text-gray-300 italic font-light">
-              "Talent. Intelligence. Clarity that scales."
+              "See clearly. Decide confidently. Hire intelligently."
             </p>
             <p className="text-sm text-gray-400 mt-4">
               Stockholm, Sweden
