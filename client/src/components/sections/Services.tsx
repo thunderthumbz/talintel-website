@@ -47,12 +47,12 @@ const services = [
   },
   {
     icon: Search,
-    title: "Executive Talent Search",
+    title: "Critical Role Search",
     description: (
       <>
         Precision search for roles that cannot fail.
         <br/><br/>
-        Targeted, discreet search for senior and leadership hires where judgment, alignment, and long-term fit matter more than speed alone.
+        Targeted, discreet search for senior and leadership hires, niche technical specialists, and hard-to-fill positions where quality, alignment, and long-term fit matter more than speed.
         <br/><br/>
         <span className="inline-block ml-0 mt-4 px-3 py-1 text-[13px] font-semibold uppercase rounded-full bg-gray-100 text-primary transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for executives, technical leaders, and mission-critical roles.</span>
       </>
