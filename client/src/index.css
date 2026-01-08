@@ -103,6 +103,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-behavior: smooth;
   scroll-padding-top: 80px; /* Adjust based on navbar height */
 }
 
@@ -115,6 +116,23 @@ html {
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading font-bold tracking-tight;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Mobile header is 56px tall; ensure hero isn't overlapped */
+  #hero {
+    padding-top: 56px;
+  }
+
+  /* Ensure anchor scroll aligns beneath the fixed header */
+  html {
+    scroll-padding-top: 56px;
+  }
+
+  /* Reserve space for the persistent CTA to avoid covering content */
+  main {
+    padding-bottom: calc(48px + 16px + env(safe-area-inset-bottom));
   }
 }
 

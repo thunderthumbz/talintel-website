@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -15,11 +15,43 @@ const navItems = [
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showCTA, setShowCTA] = useState(true);
   const { scrollY } = useScroll();
+  const lastScrollY = useRef<number>(0);
+  const idleTimer = useRef<number | null>(null);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setIsScrolled(latest > 50);
   });
+
+  // Mobile CTA show/hide logic (progressive enhancement)
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY || window.pageYOffset;
+      const delta = y - lastScrollY.current;
+
+      // If scrolling downwards, show CTA. If user scrolls up quickly, hide CTA.
+      if (delta > 0) {
+        setShowCTA(true);
+      } else if (delta < -20) {
+        setShowCTA(false);
+      }
+
+      lastScrollY.current = y;
+
+      // Idle pause: show CTA after brief idle when not hidden by menu
+      if (idleTimer.current) window.clearTimeout(idleTimer.current);
+      idleTimer.current = window.setTimeout(() => {
+        if (!mobileMenuOpen) setShowCTA(true);
+      }, 900);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (idleTimer.current) window.clearTimeout(idleTimer.current);
+    };
+  }, [mobileMenuOpen]);
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -33,13 +65,28 @@ export function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
+        "fixed top-0 left-0 right-0 z-[1000] transition-all duration-300",
+        isScrolled ? "bg-white shadow-sm" : "bg-transparent"
       )}
+      style={{ height: 56 }}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <a href="#" onClick={(e) => scrollToSection(e, "#hero")} className="group">
-          <span className={cn("font-logo text-2xl font-bold tracking-tight", isScrolled ? "text-primary" : "text-white")}>
+        <a
+          href="#"
+          onClick={(e) => scrollToSection(e, "#hero")}
+          className="group flex items-center md:block w-11 h-11 md:w-auto md:h-auto"
+          aria-label="Home"
+        >
+          {/* Mobile: show square favicon (40-44px, 44px tap target) */}
+          <img
+            src="/favicon-32x32.png"
+            alt="TALINTEL"
+            className={cn("w-10 h-10 md:hidden rounded-sm", isScrolled ? "" : "")}
+            style={{ width: 40, height: 40 }}
+          />
+
+          {/* Desktop: keep wordmark unchanged */}
+          <span className={cn("hidden md:inline-block font-logo text-2xl font-bold tracking-tight", isScrolled ? "text-primary" : "text-white")}>
             <span className="text-secondary">TAL</span>
             <span className={cn("transition-colors", isScrolled ? "text-primary" : "text-white group-hover:text-white/90")}>INTEL</span>
           </span>
@@ -90,8 +137,10 @@ export function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden p-2 relative z-10"
+          className="md:hidden relative z-[1010] flex items-center justify-center w-11 h-11"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-expanded={mobileMenuOpen}
+          aria-label="Open navigation"
         >
           {mobileMenuOpen ? (
             <X className={isScrolled ? "text-gray-900" : "text-white"} />
@@ -101,53 +150,59 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Sticky CTA Button - Fixed at top of viewport */}
+      {/* Mobile Sticky CTA Button - fixed near bottom, auto-hide via transform */}
       <motion.div
-        className="fixed bottom-0 left-0 right-0 md:hidden z-40 bg-white border-t border-gray-200 p-4 safe-area-inset-bottom"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
+        className="fixed left-0 right-0 md:hidden z-[900] px-4 pointer-events-none"
+        initial={false}
+        animate={{ y: showCTA && !mobileMenuOpen ? 0 : 84, opacity: showCTA && !mobileMenuOpen ? 1 : 0 }}
+        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+        style={{ bottom: 16 }}
       >
-        <Button
-          onClick={() => {
-            document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
-            setMobileMenuOpen(false);
-          }}
-          className="w-full font-semibold py-3 rounded-sm border-none bg-primary text-white hover:bg-primary/90 active:scale-95 transition-all duration-300"
-        >
-          Schedule a consultation
-        </Button>
+        <div className="max-w-xl mx-auto pointer-events-auto">
+          <Button
+            onClick={() => {
+              document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+              setMobileMenuOpen(false);
+            }}
+            className="w-full font-semibold h-12 max-h-[48px] rounded-full border-none bg-primary text-white hover:bg-primary/90 active:scale-95 transition-all duration-200"
+          >
+            Schedule a consultation
+          </Button>
+        </div>
       </motion.div>
-
-      {/* Add padding to body to prevent button overlap on mobile */}
-      <style>{`
-        @media (max-width: 767px) {
-          main {
-            padding-bottom: 5rem;
-          }
-        }
-      `}</style>
 
       {/* Mobile Menu Overlay - Fixed positioning with proper z-index */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed left-0 right-0 z-40 bg-white shadow-lg p-6 md:hidden flex flex-col gap-4"
-            style={{ top: isScrolled ? '4rem' : '5.5rem' }}
+            exit={{ opacity: 0, y: -10 }}
+            className="fixed inset-0 z-[1100] bg-white overflow-auto md:hidden"
           >
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                onClick={(e) => scrollToSection(e, item.href)}
-                className="text-lg font-medium text-gray-800 py-2 border-b border-gray-100 last:border-0"
-              >
-                {item.name}
-              </a>
-            ))}
+            <div className="p-6 pt-20 flex flex-col gap-4">
+              <div className="flex items-center justify-between">
+                <a href="#" onClick={(e) => scrollToSection(e, "#hero")} aria-label="Home">
+                  <img src="/favicon-32x32.png" alt="TALINTEL" className="w-10 h-10" style={{ width: 40, height: 40 }} />
+                </a>
+                <button className="w-11 h-11 flex items-center justify-center" onClick={() => setMobileMenuOpen(false)} aria-label="Close navigation">
+                  <X />
+                </button>
+              </div>
+
+              <nav className="mt-6 flex flex-col gap-2">
+                {navItems.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={(e) => scrollToSection(e, item.href)}
+                    className="text-lg font-medium text-gray-800 py-3 border-b border-gray-100 last:border-0"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </nav>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
