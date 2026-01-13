@@ -37,11 +37,11 @@ const services = [
     title: "Hiring Analytics & Forecasting",
     description: (
       <>
-        Turn hiring activity into business intelligence.
+        Understand what's happening inside your hiring process.
         <br/><br/>
-        We turn your recruiting data into clear, actionable insight with tailored dashboards that guide planning, reveal risks, and highlight trends before they impact results.
+        We analyze your ATS data and build dynamic dashboards that show where your pipeline is breaking, how long roles actually take to fill, and which bottlenecks are costing you time and talent.
         <br/><br/>
-        <span className="inline-block ml-0 mt-4 px-4 py-1 text-[13px] font-semibold uppercase rounded-lg bg-gray-100 text-primary break-words transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for leadership teams who need clarity and course correction, not vanity metrics.</span>
+        <span className="inline-block ml-0 mt-4 px-4 py-1 text-[13px] font-semibold uppercase rounded-lg bg-gray-100 text-primary break-words transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for companies who know they're hiring but can't see why it's slow, inconsistent, or inefficient.</span>
       </>
     )
   },
@@ -64,11 +64,11 @@ const services = [
     title: "Talent & Market Intelligence",
     description: (
       <>
-        Make talent decisions with real market context.
+        Understand what's happening outside your company.
         <br/><br/>
-        We map talent availability, compensation dynamics, and competitive hiring behavior to support expansion, location strategy, and critical role planning.
+        We research and map external talent markets to show you where candidates actually are, what they're paid, and who else is competing for them.
         <br/><br/>
-        <span className="inline-block ml-0 mt-4 px-4 py-1 text-[13px] font-semibold uppercase rounded-lg bg-gray-100 text-primary break-words transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for expansion planning, location strategy, and high-impact hiring decisions.</span>
+        <span className="inline-block ml-0 mt-4 px-4 py-1 text-[13px] font-semibold uppercase rounded-lg bg-gray-100 text-primary break-words transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">Best for expansion planning, market entry decisions, and understanding if a role is even fillable before you post it.</span>
       </>
     )
   },
