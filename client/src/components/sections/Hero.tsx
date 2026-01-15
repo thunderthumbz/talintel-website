@@ -28,9 +28,12 @@ export function Hero() {
     >
       {/* Parallax Background — UNCHANGED */}
       <motion.div
-        style={{ y, opacity }}
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        style={{
+          y,
+          opacity,
+          backgroundImage: `url(${heroBg})`,
+        }}
       />
 
       {/* Gradient blend behind the grid — subtle ambient */}

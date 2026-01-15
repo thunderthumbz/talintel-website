@@ -94,7 +94,7 @@ export function About() {
             {values.map((val, i) => (
               <motion.div
                 key={i}
-                ref={(el) => (cardRefs.current[i] = el)}
+                ref={(el) => { cardRefs.current[i] = el ?? null; }} // ✅ TS fix
                 initial={isMobile ? mobileInit : desktopInit}
                 whileInView={isMobile ? mobileAnimate : desktopAnimate}
                 viewport={{ once: true, margin: "-20%" }}
