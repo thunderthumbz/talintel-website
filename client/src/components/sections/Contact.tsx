@@ -197,7 +197,7 @@ export function Contact() {
                   />
                   <Button
                     type="submit"
-                    className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold h-12 text-lg rounded-none uppercase tracking-wide transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-secondary/40 relative overflow-hidden group/btn"
+                    className="w-full bg-secondary hover:bg-accent/90 text-white font-bold h-12 text-lg rounded-none uppercase tracking-wide transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-secondary/40 relative overflow-hidden group/btn"
                     disabled={form.formState.isSubmitting}
                   >
                     <motion.div
@@ -242,7 +242,7 @@ export function Contact() {
               </p>
               <Button
                 variant="outline"
-                className="w-full border-2 border-white text-white bg-transparent hover:bg-white/10 hover:border-white hover:text-white transition-all duration-300 font-bold h-12 text-lg rounded-none uppercase tracking-wide hover:scale-[1.02] active:scale-[0.98]"
+                className="w-full bg-secondary hover:bg-accent text-white border-none transition-all duration-300 font-bold h-12 text-lg rounded-none uppercase tracking-wide hover:scale-[1.02] active:scale-[0.98]"
                 onClick={() => window.open("https://calendly.com/ryan-talintel", "_blank")}
               >
                 Book a Time

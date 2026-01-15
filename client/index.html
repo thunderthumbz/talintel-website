@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
   </head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/klaro-org/klaro-js@latest/dist/klaro.min.css" />
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
@@ -27,6 +28,52 @@
             .then(reg => console.log('Service Worker registered'))
             .catch(err => console.log('Service Worker registration failed:', err));
         });
+
+    // Klaro.js Configuration for GA Consent
+    window.klaro = {
+      version: 1,
+      elementID: 'klaro',
+      styling: {
+        theme: ['dark'],
+        noConsentInfobox: false,
+        htmlClasses: ['klaro'],
+      },
+      storageMethod: 'localStorage',
+      cookieExpiresAfterDays: 365,
+      privacyPolicy: undefined,
+      services: {
+        ga: {
+          label: 'Google Analytics',
+          description: 'Analyze how visitors use TALINTEL to help us improve the site experience.',
+          purposes: ['analytics'],
+          cookies: ['_ga', '_gat', '_gid'],
+          required: false,
+        },
+      },
+      translations: {
+        en: {
+          privacyPolicy: {
+            name: 'Privacy Policy',
+            text: '',
+          },
+          consentModal: {
+            description: 'This site uses analytics only to understand how visitors use TALINTEL.\nData is never sold or shared with third parties and is used solely to improve this site.',
+          },
+          consentNotice: {
+            description: 'This site uses analytics only to understand how visitors use TALINTEL.\nData is never sold or shared with third parties and is used solely to improve this site.',
+          },
+          purposes: {
+            analytics: 'Analytics',
+          },
+        },
+      },
+    };
+
+        // Load Klaro consent manager
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://cdn.jsdelivr.net/gh/klaro-org/klaro-js@latest/dist/klaro.min.js';
+    document.head.appendChild(script);
       }
     </script>
   </body>

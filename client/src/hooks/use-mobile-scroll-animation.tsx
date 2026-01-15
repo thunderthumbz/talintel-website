@@ -1,24 +1,43 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 /**
- * Hook to manage animations based on device type
- * Disables animations on desktop, enables only on mobile scrolling
+ * Hook to manage scroll-based animations for mobile and all devices
+ * Uses Intersection Observer to trigger animations when elements enter viewport
+ * Animations trigger once per session, based on scroll position
  */
 export function useMobileScrollAnimation() {
-  const [isMobile, setIsMobile] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const hasAnimated = useRef(false);
 
   useEffect(() => {
-    // Check if device is mobile at mount
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated.current) {
+            setIsVisible(true);
+            hasAnimated.current = true;
+            // Optionally unobserve after animation triggers
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Trigger when 10% of element is visible
+        rootMargin: '0px 0px -50px 0px', // Start animation slightly before reaching viewport
+      }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
     };
-
-    checkMobile();
-
-    // Listen for resize events
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  return isMobile;
+  return { ref, isVisible };
 }

@@ -1,8 +1,9 @@
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import founderImg from "@/assets/generated_images/ryan_LI.webp";
 import { Target, Users, Lightbulb, Settings } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useMobileScrollAnimation } from "@/hooks/use-mobile-scroll-animation";
+import { useRef, useEffect } from "react";
 
 const values = [
   {
@@ -29,6 +30,35 @@ const values = [
 
 export function About() {
   const isMobile = useMobileScrollAnimation();
+
+  // Mobile animation controls
+  const formControls = useAnimation();
+  const infoControls = useAnimation();
+
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  // Observe each card for mobile scroll animation
+  useEffect(() => {
+    if (!isMobile) return;
+    const observerOptions = { threshold: 0.15 };
+
+    const observers: IntersectionObserver[] = [];
+    cardRefs.current.forEach((el, i) => {
+      if (!el) return;
+      const observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+          formControls.start({ opacity: 1, x: 0 });
+          infoControls.start({ opacity: 1, x: 0 });
+          observer.unobserve(entry.target);
+        }
+      }, observerOptions);
+      observer.observe(el);
+      observers.push(observer);
+    });
+
+    return () => observers.forEach((o) => o.disconnect());
+  }, [isMobile, formControls, infoControls]);
+
   const mobileInit = { opacity: 0, y: 20, rotate: -5 };
   const mobileAnimate = { opacity: 1, y: 0, rotate: 0 };
   const desktopInit = { opacity: 0, y: 8 };
@@ -64,6 +94,7 @@ export function About() {
             {values.map((val, i) => (
               <motion.div
                 key={i}
+                ref={(el) => (cardRefs.current[i] = el)}
                 initial={isMobile ? mobileInit : desktopInit}
                 whileInView={isMobile ? mobileAnimate : desktopAnimate}
                 viewport={{ once: true, margin: "-20%" }}
