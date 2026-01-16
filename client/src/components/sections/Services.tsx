@@ -2,8 +2,9 @@ import { motion, useAnimation } from "framer-motion";
 import { Search, Globe, TrendingUp, Workflow, Bot, UserPlus } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { useMobileScrollAnimation } from "@/hooks/use-mobile-scroll-animation";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { useRef, useEffect } from "react";
+
 
 const services = [
   {
@@ -90,7 +91,7 @@ const services = [
       <>
         Use technology to support decisions, not replace them.
         <br /><br />
-        We guide teams to use automation and AI wisely, focusing on what’s practical and aligned with their needs rather than chasing the newest tools.
+        We guide teams to use automation and AI wisely, focusing on what's practical and aligned with their needs rather than chasing the newest tools.
         <br /><br />
         <span className="inline-block ml-0 mt-4 px-4 py-1 text-[13px] font-semibold uppercase rounded-lg bg-gray-100 text-primary break-words transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">
           Best for organizations overwhelmed by tools but lacking clarity.
@@ -100,11 +101,11 @@ const services = [
   }
 ];
 
+
 export function Services() {
-  const isMobile = useMobileScrollAnimation();
-  const mobileControls = useAnimation();
   const desktopInit = { opacity: 0, y: 10, scale: 0.995 };
   const desktopAnimate = { opacity: 1, y: 0, scale: 1 };
+
 
   return (
     <section id="what-we-do" className="py-24 bg-gray-50 relative overflow-hidden">
@@ -117,7 +118,7 @@ export function Services() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-4xl mx-auto mb-16"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -126,7 +127,7 @@ export function Services() {
           >
             What We Do
           </motion.h2>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -145,36 +146,20 @@ export function Services() {
           </motion.div>
         </motion.div>
 
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => {
             const cardRef = useRef<HTMLDivElement>(null);
+            const { ref: scrollRef, hasEntered } = useScrollReveal({ threshold: 0.15 });
 
-            // ✅ Mobile scroll effect
-            useEffect(() => {
-              if (!isMobile || !cardRef.current) return;
-
-              const observer = new IntersectionObserver(
-                ([entry]) => {
-                  if (entry.isIntersecting) {
-                    mobileControls.start({ opacity: 1, y: 0 });
-                    observer.unobserve(entry.target);
-                  }
-                },
-                { threshold: 0.15 }
-              );
-
-              observer.observe(cardRef.current);
-
-              return () => observer.disconnect();
-            }, [isMobile]);
 
             return (
               <motion.div
                 key={index}
-                ref={cardRef}
-                initial={isMobile ? { opacity: 0, y: 20 } : desktopInit}
-                animate={isMobile ? mobileControls : desktopAnimate}
-                whileInView={!isMobile ? desktopAnimate : undefined}
+                ref={scrollRef}
+                initial={desktopInit}
+                animate={hasEntered ? desktopAnimate : desktopInit}
+                whileInView={desktopAnimate}
                 viewport={{ once: true, margin: "-20%" }}
                 transition={{ duration: 0.5, delay: index * 0.12 }}
               >
@@ -183,8 +168,8 @@ export function Services() {
                     "h-full border-l-4 bg-white shadow-sm transition-all duration-300 group relative",
                     "hover:shadow-2xl hover:-translate-y-3 md:hover:scale-[1.02] hover:border-l-accent",
                     "active:scale-[0.98] focus-within:ring-2 focus-within:ring-accent outline-none",
-                    service.isCore 
-                      ? "border-l-accent ring-1 ring-accent/20 shadow-accent/5 hover:ring-accent/40 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)]" 
+                    service.isCore
+                      ? "border-l-accent ring-1 ring-accent/20 shadow-accent/5 hover:ring-accent/40 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)]"
                       : "border-l-secondary"
                   )}
                 >
@@ -211,6 +196,7 @@ export function Services() {
           })}
         </div>
 
+
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -225,3 +211,4 @@ export function Services() {
     </section>
   );
 }
+

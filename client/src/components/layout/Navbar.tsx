@@ -128,8 +128,10 @@ export function Navbar() {
           aria-label="Toggle navigation"
         >
           {mobileMenuOpen ? (
-            // X button always primary
-            <X className="text-primary transition-colors duration-300" />
+            // Moving the X button outside of the mobile menu overlay
+            <X
+              className="text-primary transition-colors duration-300 opacity-100 z-[9999] pointer-events-auto absolute top-4 right-4"
+            />
           ) : (
             // Menu white on load, primary on scroll
             <Menu

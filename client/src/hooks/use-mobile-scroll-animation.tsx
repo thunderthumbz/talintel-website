@@ -1,43 +1,70 @@
-import { useEffect, useRef, useState } from 'react';
+// hooks/use-mobile-scroll-animation.ts
+import { useEffect, useState } from 'react';
 
-/**
- * Hook to manage scroll-based animations for mobile and all devices
- * Uses Intersection Observer to trigger animations when elements enter viewport
- * Animations trigger once per session, based on scroll position
- */
 export function useMobileScrollAnimation() {
-  const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if device is mobile/tablet (touchscreen)
+    const checkMobile = () => {
+      const isTouchDevice = () => {
+        return (
+          (typeof window !== 'undefined' && 'ontouchstart' in window) ||
+          (typeof navigator !== 'undefined' && navigator.maxTouchPoints > 0)
+        );
+      };
+
+      const mobileBreakpoint = window.matchMedia('(max-width: 768px)').matches;
+      setIsMobile(isTouchDevice() && mobileBreakpoint);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  return isMobile;
+}
+
+// hooks/use-card-scroll-animation.ts
+import { useRef, useEffect, useCallback } from 'react';
+import { useAnimation } from 'framer-motion';
+
+interface UseCardScrollAnimationProps {
+  isMobile: boolean;
+  threshold?: number;
+}
+
+export function useCardScrollAnimation({ isMobile, threshold = 0.15 }: UseCardScrollAnimationProps) {
+  const cardRef = useRef<HTMLDivElement>(null);
+  const controls = useAnimation();
   const hasAnimated = useRef(false);
 
   useEffect(() => {
+    // Skip observer setup if not mobile
+    if (!isMobile || !cardRef.current) return;
+
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasAnimated.current) {
-            setIsVisible(true);
-            hasAnimated.current = true;
-            // Optionally unobserve after animation triggers
-            observer.unobserve(entry.target);
-          }
-        });
+      ([entry]) => {
+        // Trigger animation when card enters viewport
+        if (entry.isIntersecting && !hasAnimated.current) {
+          controls.start({ opacity: 1, y: 0 });
+          hasAnimated.current = true;
+          observer.unobserve(entry.target);
+        }
       },
-      {
-        threshold: 0.1, // Trigger when 10% of element is visible
-        rootMargin: '0px 0px -50px 0px', // Start animation slightly before reaching viewport
+      { 
+        threshold,
+        rootMargin: '50px' // Trigger slightly before card is fully visible
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    observer.observe(cardRef.current);
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+      observer.disconnect();
     };
-  }, []);
+  }, [isMobile, controls, threshold]);
 
-  return { ref, isVisible };
+  return { cardRef, controls };
 }
