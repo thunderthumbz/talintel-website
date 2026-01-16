@@ -169,7 +169,7 @@ export function About() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-primary font-medium italic border-l-3 border-accent pl-6 py-4 bg-gray-50 text-lg md:text-xl"
               >
-                "I've made a career running toward hiring problems that other people avoid. The messy, high-stakes ones where there's no time and too much at risk. That's where I do my best work. TALINTEL turns complexity into clarity so you can hire smarter, faster, and protect your brand reputation."
+                "I help companies when hiring isn't working the way it should. Sometimes that's roles sitting open too long. Sometimes it's offers that don't land or decisions that feel inconsistent. Sometimes it's not having the right structure or leadership in place to fix it. TALINTEL brings clarity to what's broken and builds systems that actually perform."
               </motion.p>
             </motion.div>
           </div>
