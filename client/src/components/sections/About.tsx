@@ -10,22 +10,22 @@ const values = [
   {
     icon: Target,
     title: "Clarity",
-    text: "Focus on the roles, decisions, and signals that actually matter."
+    text: "We focus on the decisions, roles, and signals that are critical to hiring success."
   },
   {
     icon: Lightbulb,
     title: "Intelligence",
-    text: "Data is only valuable when it guides smarter decisions and meaningful action."
+    text: "Data only matters when it leads to smarter decisions and real results."
   },
   {
     icon: Settings,
     title: "Structure",
-    text: "Strong hiring systems rely on consistency and follow-through under pressure."
+    text: "Effective hiring systems are built on consistency and reliable execution, even in tough situations."
   },
   {
     icon: Users,
     title: "Accountability",
-    text: "We work as partners. Outcomes matter."
+    text: "We partner with you because we believe in delivering meaningful outcomes, not just following processes."
   }
 ];
 
