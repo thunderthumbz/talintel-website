@@ -14,7 +14,7 @@ const services = [
       <>
         Reduce decision time without lowering the bar.
         <br /><br />
-        We identify where hiring processes break under pressure and redesign them to produce consistent, high-quality decisions, without adding unnecessary steps or tools.
+        We identify where hiring decisions slow down or break and rebuild the process so teams can make strong decisions quickly and consistently.
         <br /><br />
         <span className="inline-block ml-0 mt-4 px-4 py-1 text-[13px] font-semibold uppercase rounded-lg bg-gray-100 text-primary break-words transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">
           Best for teams scaling engineering, product, or leadership hires under time constraints.
@@ -29,7 +29,7 @@ const services = [
       <>
         Senior talent leadership when it matters most.
         <br /><br />
-        Embedded Head-of-Talent support for organizations navigating growth, restructuring, or transition, without committing to a full-time executive.
+        On-demand senior talent leadership for companies facing growth, restructuring, or leadership gaps, without the commitment of a full-time executive.
         <br /><br />
         <span className="inline-block ml-0 mt-4 px-4 py-1 text-[13px] font-semibold uppercase rounded-lg bg-gray-100 text-primary break-words transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">
           Best for post-funding scaleups, new studios, or leadership gaps.
@@ -45,7 +45,7 @@ const services = [
       <>
         Understand what's happening inside your hiring process.
         <br /><br />
-        We analyze your ATS data and build dynamic dashboards that show where your pipeline is breaking, how long roles actually take to fill, and which bottlenecks are costing you time and talent.
+        We turn ATS data into clear insight on where hiring slows down, why roles take longer to fill, and what is blocking progress.
         <br /><br />
         <span className="inline-block ml-0 mt-4 px-4 py-1 text-[13px] font-semibold uppercase rounded-lg bg-gray-100 text-primary break-words transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">
           Best for companies who know they're hiring but can't see why it's slow, inconsistent, or inefficient.
@@ -60,7 +60,7 @@ const services = [
       <>
         Precision search for roles that cannot fail.
         <br /><br />
-        Targeted, discreet search for senior and leadership hires, niche technical specialists, and hard-to-fill positions where quality, alignment, and long-term fit matter more than speed.
+        Targeted search for mission-critical leadership, technical, and hard-to-fill roles, focusing on quality, fit, and long-term success.
         <br /><br />
         <span className="inline-block ml-0 mt-4 px-4 py-1 text-[13px] font-semibold uppercase rounded-lg bg-gray-100 text-primary break-words transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">
           Best for executives, technical leaders, and mission-critical roles.
@@ -76,7 +76,7 @@ const services = [
       <>
         Understand what's happening outside your company.
         <br /><br />
-        We research and map external talent markets to show you where candidates actually are, what they're paid, and who else is competing for them.
+        We provide in-depth market intelligence to help you understand where talent is located, what they're earning, and who you're competing with.
         <br /><br />
         <span className="inline-block ml-0 mt-4 px-4 py-1 text-[13px] font-semibold uppercase rounded-lg bg-gray-100 text-primary break-words transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">
           Best for expansion planning, market entry decisions, and understanding if a role is even fillable before you post it.
@@ -91,7 +91,7 @@ const services = [
       <>
         Use technology to support decisions, not replace them.
         <br /><br />
-        We guide teams to use automation and AI wisely, focusing on what's practical and aligned with their needs rather than chasing the newest tools.
+        We help companies integrate AI and automation in ways that enhance decision-making, reduce complexity, and align with their hiring goals.
         <br /><br />
         <span className="inline-block ml-0 mt-4 px-4 py-1 text-[13px] font-semibold uppercase rounded-lg bg-gray-100 text-primary break-words transition-colors duration-200 hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">
           Best for organizations overwhelmed by tools but lacking clarity.
