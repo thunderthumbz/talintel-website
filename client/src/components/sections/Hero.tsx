@@ -78,8 +78,7 @@ export function Hero() {
 
 
           <p className="text-lg text-gray-200">
-            TALINTEL partners with executive and talent leaders to de-risk
-            critical hires and build durable talent advantage.
+            Empowering Tech & Gaming Leaders to Make Smarter, Faster, and More Impactful Hiring Decisions.
           </p>
 
 
